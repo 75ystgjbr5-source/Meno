@@ -1,0 +1,2704 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Suivi Santé">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#2A4E6B">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIlN1aXZpIFNhbnRcdTAwZTkgJiBIb3Jtb25lcyIsICJzaG9ydF9uYW1lIjogIlN1aXZpIFNhbnRcdTAwZTkiLCAiZGVzY3JpcHRpb24iOiAiU3VpdmkgcXVvdGlkaWVuIHNhbnRcdTAwZTksIGhvcm1vbmVzIGV0IHN5bXB0XHUwMGY0bWVzIiwgInN0YXJ0X3VybCI6ICIuIiwgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsICJiYWNrZ3JvdW5kX2NvbG9yIjogIiNGMkY1RjgiLCAidGhlbWVfY29sb3IiOiAiIzJBNEU2QiIsICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdCIsICJpY29ucyI6IFt7InNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBMU1USWdOVEV5SWo0S0lDQThjbVZqZENCM2FXUjBhRDBpTlRFeUlpQm9aV2xuYUhROUlqVXhNaUlnY25nOUlqRXdNQ0lnWm1sc2JEMGlJekpCTkVVMlFpSXZQZ29nSUR4amFYSmpiR1VnWTNnOUlqSTFOaUlnWTNrOUlqSTFOaUlnY2owaU5UVWlJR1pwYkd3OUluZG9hWFJsSWlCdmNHRmphWFI1UFNJd0xqazFJaTgrQ2lBZ1BHTnBjbU5zWlNCamVEMGlNalUySWlCamVUMGlNVFUySWlCeVBTSTBPQ0lnWm1sc2JEMGlkMmhwZEdVaUlHOXdZV05wZEhrOUlqQXVPRFVpTHo0S0lDQThZMmx5WTJ4bElHTjRQU0l5TlRZaUlHTjVQU0l6TlRZaUlISTlJalE0SWlCbWFXeHNQU0ozYUdsMFpTSWdiM0JoWTJsMGVUMGlNQzQ0TlNJdlBnb2dJRHhqYVhKamJHVWdZM2c5SWpFMU5pSWdZM2s5SWpJMU5pSWdjajBpTkRnaUlHWnBiR3c5SW5kb2FYUmxJaUJ2Y0dGamFYUjVQU0l3TGpnMUlpOCtDaUFnUEdOcGNtTnNaU0JqZUQwaU16VTJJaUJqZVQwaU1qVTJJaUJ5UFNJME9DSWdabWxzYkQwaWQyaHBkR1VpSUc5d1lXTnBkSGs5SWpBdU9EVWlMejRLSUNBOFkybHlZMnhsSUdONFBTSXhPREVpSUdONVBTSXhPREVpSUhJOUlqTTRJaUJtYVd4c1BTSjNhR2wwWlNJZ2IzQmhZMmwwZVQwaU1DNDNJaTgrQ2lBZ1BHTnBjbU5zWlNCamVEMGlNek14SWlCamVUMGlNVGd4SWlCeVBTSXpPQ0lnWm1sc2JEMGlkMmhwZEdVaUlHOXdZV05wZEhrOUlqQXVOeUl2UGdvZ0lEeGphWEpqYkdVZ1kzZzlJakU0TVNJZ1kzazlJak16TVNJZ2NqMGlNemdpSUdacGJHdzlJbmRvYVhSbElpQnZjR0ZqYVhSNVBTSXdMamNpTHo0S0lDQThZMmx5WTJ4bElHTjRQU0l6TXpFaUlHTjVQU0l6TXpFaUlISTlJak00SWlCbWFXeHNQU0ozYUdsMFpTSWdiM0JoWTJsMGVUMGlNQzQzSWk4K0NpQWdQR05wY21Oc1pTQmplRDBpTWpVMklpQmplVDBpTWpVMklpQnlQU0kwTUNJZ1ptbHNiRDBpSXpORU5rSTRSU0l2UGdvOEwzTjJaejQ9IiwgInNpemVzIjogIjUxMng1MTIiLCAidHlwZSI6ICJpbWFnZS9zdmcreG1sIiwgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIn1dfQ==">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMCIgZmlsbD0iIzJBNEU2QiIvPgogIDxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iNTUiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjk1Ii8+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMTU2IiByPSI0OCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuODUiLz4KICA8Y2lyY2xlIGN4PSIyNTYiIGN5PSIzNTYiIHI9IjQ4IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC44NSIvPgogIDxjaXJjbGUgY3g9IjE1NiIgY3k9IjI1NiIgcj0iNDgiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjg1Ii8+CiAgPGNpcmNsZSBjeD0iMzU2IiBjeT0iMjU2IiByPSI0OCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuODUiLz4KICA8Y2lyY2xlIGN4PSIxODEiIGN5PSIxODEiIHI9IjM4IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC43Ii8+CiAgPGNpcmNsZSBjeD0iMzMxIiBjeT0iMTgxIiByPSIzOCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuNyIvPgogIDxjaXJjbGUgY3g9IjE4MSIgY3k9IjMzMSIgcj0iMzgiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjciLz4KICA8Y2lyY2xlIGN4PSIzMzEiIGN5PSIzMzEiIHI9IjM4IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC43Ii8+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjU2IiByPSI0MCIgZmlsbD0iIzNENkI4RSIvPgo8L3N2Zz4=">
+<link rel="apple-touch-startup-image" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMCIgZmlsbD0iIzJBNEU2QiIvPgogIDxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iNTUiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjk1Ii8+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMTU2IiByPSI0OCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuODUiLz4KICA8Y2lyY2xlIGN4PSIyNTYiIGN5PSIzNTYiIHI9IjQ4IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC44NSIvPgogIDxjaXJjbGUgY3g9IjE1NiIgY3k9IjI1NiIgcj0iNDgiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjg1Ii8+CiAgPGNpcmNsZSBjeD0iMzU2IiBjeT0iMjU2IiByPSI0OCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuODUiLz4KICA8Y2lyY2xlIGN4PSIxODEiIGN5PSIxODEiIHI9IjM4IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC43Ii8+CiAgPGNpcmNsZSBjeD0iMzMxIiBjeT0iMTgxIiByPSIzOCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuNyIvPgogIDxjaXJjbGUgY3g9IjE4MSIgY3k9IjMzMSIgcj0iMzgiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjciLz4KICA8Y2lyY2xlIGN4PSIzMzEiIGN5PSIzMzEiIHI9IjM4IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC43Ii8+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjU2IiByPSI0MCIgZmlsbD0iIzNENkI4RSIvPgo8L3N2Zz4=">
+<title>Suivi Santé & Hormones</title>
+
+<style>
+  :root {
+    --bg: #F2F5F8;
+    --surface: #FFFFFF;
+    --surface2: #E8EDF2;
+    --accent: #3D6B8E;
+    --accent-light: #E4EDF4;
+    --accent-dark: #2A4E6B;
+    --text: #1A2130;
+    --text-muted: #64748B;
+    --border: #D8E0E8;
+    --success: #2D8A6A;
+    --danger: #B83232;
+    --warn: #B07010;
+    --radius: 8px;
+    --radius-sm: 5px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.5;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* NAV */
+  nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 16px;
+    padding-top: env(safe-area-inset-top);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(56px + env(safe-area-inset-top));
+  }
+  .nav-brand { font-weight: 600; font-size: 16px; color: var(--accent); letter-spacing: -0.3px; }
+  .nav-tabs { display: flex; gap: 4px; }
+  .nav-tab {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .nav-tab.active { background: var(--accent-light); color: var(--accent); }
+  .nav-tab:hover:not(.active) { background: var(--bg); }
+
+  /* SCREENS */
+  .screen { display: none; padding: 20px 16px 80px; max-width: 680px; margin: 0 auto; }
+  .screen.active { display: block; }
+
+  /* SECTION CARDS (accordion) */
+  .section-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    cursor: pointer;
+    user-select: none;
+    gap: 10px;
+  }
+  .section-header:hover { background: var(--bg); }
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .section-icon { width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; color: var(--accent); flex-shrink: 0; }
+  .section-chevron { font-size: 12px; color: var(--text-muted); transition: transform .2s; }
+  .section-card.open .section-chevron { transform: rotate(180deg); }
+  .section-body { display: none; padding: 0 16px 16px; border-top: 1px solid var(--border); }
+  .section-card.open .section-body { display: block; }
+
+  /* FORM ELEMENTS */
+  label { display: block; font-size: 13px; font-weight: 500; color: var(--text-muted); margin-bottom: 4px; margin-top: 12px; }
+  input[type=text], input[type=number], input[type=date], input[type=time], textarea, select {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    color: var(--text);
+    background: var(--surface);
+    outline: none;
+    transition: border-color .15s;
+  }
+  input:focus, textarea:focus, select:focus { border-color: var(--accent); }
+  textarea { resize: vertical; min-height: 70px; }
+
+  /* PILL SELECTORS */
+  .pill-group { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .pill {
+    padding: 6px 13px;
+    border-radius: 20px;
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .pill.selected { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
+
+  /* MOOD BUTTONS */
+  .mood-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 10px; }
+  .mood-btn {
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    padding: 12px 4px 10px;
+    border-radius: var(--radius);
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    cursor: pointer;
+    transition: all .15s;
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+  }
+  .mood-btn svg { transition: transform .15s; }
+  .mood-btn .mood-label { font-size: 10px; color: var(--text-muted); text-align: center; line-height: 1.2; font-weight: 500; }
+  .mood-btn.selected { border-color: var(--accent); background: var(--accent-light); }
+  .mood-btn.selected .mood-label { color: var(--accent); }
+  .mood-btn.selected svg { transform: scale(1.08); }
+
+  /* FLOW SELECTOR */
+  .flow-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+  .flow-btn {
+    display: flex; flex-direction: row; align-items: center; gap: 10px;
+    padding: 14px 16px;
+    border-radius: 24px;
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    cursor: pointer;
+    transition: all .15s;
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    text-align: left;
+    line-height: 1;
+  }
+  .flow-btn .flow-icon { display: flex; gap: 3px; align-items: center; justify-content: center; flex-shrink: 0; }
+  .flow-btn.selected { border-color: #A01848; background: #FDF0F5; color: #7A0A30; }
+  .flow-btn .drop-svg { color: inherit; }
+  .flow-btn-none { grid-column: 1 / -1; }
+
+  /* MEDICATIONS */
+  .med-row {
+    display: grid;
+    grid-template-columns: 1fr 80px 80px auto;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .med-row input { margin: 0; }
+  .btn-icon {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    border: none;
+    background: #FEE2E2;
+    color: var(--danger);
+    cursor: pointer;
+    font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .btn-add {
+    display: flex; align-items: center; gap: 6px;
+    padding: 7px 12px;
+    border-radius: var(--radius-sm);
+    border: 1.5px dashed var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .15s;
+    margin-top: 8px;
+  }
+  .btn-add:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* SYMPTOMS */
+  .symptom-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 8px 10px;
+    background: var(--bg);
+    border-radius: var(--radius-sm);
+  }
+  .intensity-btns { display: flex; gap: 4px; }
+  .int-btn {
+    width: 28px; height: 28px;
+    border-radius: 6px;
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .15s;
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-muted);
+  }
+  .int-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
+
+  /* SLEEP QUALITY */
+  .sq-group { display: flex; gap: 6px; margin-top: 6px; }
+  .sq-btn {
+    flex: 1;
+    padding: 8px;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .15s;
+    text-align: center;
+  }
+  .sq-btn.selected { background: var(--accent-light); border-color: var(--accent); color: var(--accent); font-weight: 500; }
+
+  /* BUTTONS */
+  .btn-primary {
+    display: block; width: 100%;
+    padding: 13px;
+    border-radius: var(--radius);
+    border: none;
+    background: var(--accent);
+    color: white;
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .15s;
+    margin-top: 16px;
+  }
+  .btn-primary:hover { background: var(--accent-dark); }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* DATE HEADER */
+  .date-card {
+    background: var(--accent-dark);
+    color: white;
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .date-card input[type=date] {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    width: auto;
+    padding: 0;
+  }
+  .date-card input[type=date]::-webkit-calendar-picker-indicator { filter: invert(1); }
+  .date-nav { display: flex; gap: 8px; }
+  .date-nav button {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    width: 32px; height: 32px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /* TOAST */
+  .toast {
+    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+    background: var(--text);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+    z-index: 999;
+    white-space: nowrap;
+  }
+  .toast.show { opacity: 1; }
+
+  /* REPORT SCREEN */
+  .report-controls {
+    background: var(--surface);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  .period-btns { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+  .period-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .15s;
+    color: var(--text-muted);
+  }
+  .period-btn.active { background: var(--accent-light); border-color: var(--accent); color: var(--accent); font-weight: 500; }
+  .custom-dates { display: flex; gap: 8px; margin-top: 10px; align-items: center; flex-wrap: wrap; }
+  .custom-dates input { flex: 1; min-width: 120px; margin: 0; }
+  .criteria-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 8px; }
+  .criteria-item {
+    display: flex; align-items: center; justify-content: center;
+    padding: 8px 10px;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--border);
+    cursor: pointer;
+    font-size: 13px;
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 500;
+    transition: all .15s;
+    background: var(--surface);
+    color: var(--text-muted);
+    text-align: center;
+  }
+  .criteria-item.selected { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
+
+  /* REPORT TABLE */
+  .table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); }
+  table { border-collapse: collapse; font-size: 12px; min-width: 100%; }
+  th {
+    background: var(--surface2);
+    padding: 8px 10px;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    white-space: nowrap;
+    font-size: 11px;
+    color: var(--accent-dark);
+    min-width: 80px;
+  }
+  th:first-child { text-align: left; min-width: 110px; position: sticky; left: 0; background: var(--surface2); z-index: 2; }
+  td {
+    padding: 7px 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  td:first-child { text-align: left; font-weight: 500; font-size: 11px; color: var(--text-muted); position: sticky; left: 0; background: var(--surface); z-index: 1; }
+  tr:last-child td { border-bottom: none; }
+  td.med-cell { font-size: 10px; line-height: 1.4; text-align: left; max-width: 140px; white-space: normal; }
+  .export-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  .no-data { text-align: center; padding: 40px 20px; color: var(--text-muted); }
+  .no-data p { margin-top: 8px; font-size: 14px; }
+
+  /* HISTORY SCREEN */
+  .history-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .history-item:hover { border-color: var(--accent); }
+  .history-date { font-weight: 600; font-size: 14px; }
+  .history-chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+  .chip { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: var(--accent-light); color: var(--accent); }
+  .chip.mood { background: #E8F0E8; color: #1A4A2A; }
+  .chip.sleep { background: #E4EDF4; color: #2A4E6B; }
+  .chip.flow { background: #FDE8E8; color: #7A1A1A; }
+
+  /* SETTINGS SCREEN */
+  .settings-section { margin-bottom: 20px; }
+  .settings-title { font-weight: 600; margin-bottom: 10px; font-size: 14px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .settings-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  .tag-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .tag {
+    display: flex; align-items: center; gap: 4px;
+    padding: 4px 10px;
+    border-radius: 14px;
+    background: var(--surface2);
+    font-size: 12px;
+    border: 1px solid var(--border);
+  }
+  .tag button { background: none; border: none; cursor: pointer; color: var(--text-muted); font-size: 13px; padding: 0; line-height: 1; }
+  .add-tag-row { display: flex; gap: 8px; margin-top: 8px; }
+  .add-tag-row input { flex: 1; margin: 0; }
+  .add-tag-row button { white-space: nowrap; }
+
+
+  /* PWA INSTALL BANNER */
+  #pwa-banner {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--accent-dark);
+    color: white;
+    padding: 14px 16px;
+    z-index: 10000;
+    font-size: 13px;
+    line-height: 1.4;
+    box-shadow: 0 -2px 12px rgba(0,0,0,.2);
+  }
+  #pwa-banner.show { display: flex; align-items: center; gap: 12px; }
+  #pwa-banner .pwa-text { flex: 1; }
+  #pwa-banner .pwa-text strong { display: block; margin-bottom: 2px; }
+  #pwa-banner button {
+    background: white; color: var(--accent-dark);
+    border: none; border-radius: 6px;
+    padding: 6px 12px; font-size: 12px; font-weight: 600;
+    cursor: pointer; white-space: nowrap;
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+  }
+  #pwa-banner .pwa-close {
+    background: transparent; color: white;
+    border: none; font-size: 18px; cursor: pointer;
+    padding: 0 4px; line-height: 1;
+  }
+
+  /* PDF OVERLAY */
+  #pdf-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: white;
+    z-index: 9999;
+    overflow-y: auto;
+    padding: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    color: #1A2130;
+  }
+  #pdf-overlay.active { display: block; }
+  .pdf-overlay-bar {
+    position: sticky;
+    top: 0;
+    background: white;
+    border-bottom: 2px solid #3D6B8E;
+    padding: 10px 0 10px;
+    margin-bottom: 16px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 10;
+  }
+  .pdf-overlay-bar h2 { font-size: 13px; font-weight: 700; color: #3D6B8E; flex: 1; }
+  .pdf-overlay-bar button {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1.5px solid #3D6B8E;
+    background: #3D6B8E;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .pdf-overlay-bar button.close-btn {
+    background: white;
+    color: #3D6B8E;
+  }
+  #pdf-overlay h1 { font-size: 15pt; font-weight: 700; color: #3D6B8E; margin-bottom: 4pt; }
+  #pdf-overlay .pdf-header { margin-bottom: 14pt; padding-bottom: 8pt; border-bottom: 2px solid #3D6B8E; }
+  #pdf-overlay .pdf-header p { font-size: 9pt; color: #64748B; margin-top: 2pt; }
+  #pdf-overlay .pdf-footer { margin-top: 12pt; font-size: 7.5pt; color: #94A3B8; border-top: 1px solid #DDE3EA; padding-top: 5pt; }
+  #pdf-overlay table { border-collapse: collapse; width: 100%; font-size: 7.5pt; margin-top: 10pt; }
+  #pdf-overlay th { background: #E4EDF4; color: #2A4E6B; padding: 4pt 5pt; text-align: center; border: 1px solid #C8D8E8; font-weight: 700; white-space: nowrap; }
+  #pdf-overlay th:first-child { text-align: left; min-width: 80pt; }
+  #pdf-overlay td { padding: 3.5pt 5pt; text-align: center; border: 1px solid #DDE3EA; vertical-align: middle; }
+  #pdf-overlay td:first-child { text-align: left; font-weight: 600; color: #64748B; font-size: 7pt; }
+  #pdf-overlay tr:nth-child(even) td { background: #F8FAFB; }
+  #pdf-overlay td.med-cell { font-size: 7pt; line-height: 1.4; text-align: left; }
+  #pdf-overlay .sym-int-1 { background: #FEF3C7; }
+  #pdf-overlay .sym-int-2 { background: #FED7AA; }
+  #pdf-overlay .sym-int-3 { background: #FECACA; }
+  #pdf-overlay .gpdf-med-section { margin-bottom: 12pt; }
+  #pdf-overlay .gpdf-section-title { font-size: 8pt; font-weight: 700; color: #64748B; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5pt; }
+  #pdf-overlay .gpdf-med-table { border-collapse: collapse; width: 100%; font-size: 7pt; }
+  #pdf-overlay .gpdf-med-table td { border: 1px solid #DDE3EA; padding: 3pt 4pt; vertical-align: top; }
+  #pdf-overlay .gpdf-date { font-weight: 700; color: #3D6B8E; margin-bottom: 2pt; }
+  #pdf-overlay .gpdf-med { color: #1A2130; line-height: 1.4; }
+  @media print {
+    body > *:not(#pdf-overlay) { display: none !important; }
+    #pdf-overlay { display: block !important; position: static !important; padding: 0 !important; }
+    .pdf-overlay-bar { display: none !important; }
+    @page { margin: 8mm; size: landscape; }
+  }
+  /* CHARTS SCREEN */
+  .chart-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 14px;
+  }
+  .chart-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+  canvas.chart-canvas { width: 100%; display: block; cursor: crosshair; }
+  .chart-legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+  .chart-legend-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text-muted); }
+  .chart-legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .chart-period-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+  .chart-period-btn {
+    padding: 5px 12px; border-radius: 16px;
+    border: 1.5px solid var(--border); background: var(--surface);
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 500;
+    color: var(--text-muted); cursor: pointer; transition: all .15s;
+  }
+  .chart-period-btn.active { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
+  .var-toggles { display: flex; flex-wrap: wrap; gap: 6px; }
+  .var-toggle {
+    padding: 5px 12px; border-radius: 14px;
+    border: 1.5px solid var(--border); background: var(--surface);
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 500;
+    color: var(--text-muted); cursor: pointer; transition: all .15s;
+  }
+  .var-toggle.active { border-color: var(--accent); background: var(--accent-light); color: var(--accent); }
+  /* Medication timeline */
+  .med-timeline { overflow-x: auto; padding-bottom: 4px; }
+  .med-timeline-inner { display: flex; gap: 0; min-width: max-content; }
+  .med-day-col { min-width: 52px; max-width: 72px; flex: 1; padding: 0 4px; border-right: 1px solid var(--border); }
+  .med-day-col:last-child { border-right: none; }
+  .med-day-label { font-size: 10px; font-weight: 600; color: var(--text-muted); text-align: center; margin-bottom: 5px; padding-bottom: 5px; border-bottom: 1px solid var(--border); }
+  .med-day-item { font-size: 10px; color: var(--text); line-height: 1.4; text-align: center; margin-bottom: 2px; }
+  .med-day-item.med-dose { color: var(--accent); font-weight: 500; }
+  .med-day-empty { font-size: 10px; color: var(--border); text-align: center; }
+  /* symptom stacked charts */
+  .sym-chart-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px 10px; margin-bottom: 10px; }
+  .sym-chart-label { font-size: 12px; font-weight: 600; color: var(--text); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+  .sym-color-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .chart-tooltip {
+    position: fixed; background: var(--text); color: white;
+    padding: 6px 10px; border-radius: 6px; font-size: 12px;
+    pointer-events: none; opacity: 0; transition: opacity .15s; z-index: 200; white-space: nowrap;
+  }
+
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    .med-row { grid-template-columns: 1fr 70px 70px auto; }
+    .nav-brand { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-brand">Suivi Santé</span>
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="showScreen('saisie')">Saisie</button>
+    <button class="nav-tab" onclick="showScreen('historique')">Historique</button>
+    <button class="nav-tab" onclick="showScreen('graphiques')">Graphiques</button>
+    <button class="nav-tab" onclick="showScreen('rapport')">Rapport</button>
+    <button class="nav-tab" onclick="showScreen('reglages')">Réglages</button>
+  </div>
+</nav>
+
+<!-- ==================== SAISIE ==================== -->
+<div id="screen-saisie" class="screen active">
+
+  <!-- DATE -->
+  <div class="date-card">
+    <div>
+      <div style="font-size:12px;opacity:.8;margin-bottom:2px">Saisie du</div>
+      <input type="date" id="entry-date">
+    </div>
+    <div class="date-nav">
+      <button onclick="changeDay(-1)">‹</button>
+      <button onclick="changeDay(1)">›</button>
+    </div>
+  </div>
+
+  <!-- MÉDICAMENTS -->
+  <div class="section-card open" id="sec-meds">
+    <div class="section-header" onclick="toggleSection('sec-meds')">
+      <span class="section-title"><span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg></span> Médicaments & suppléments</span>
+      <span class="section-chevron">▼</span>
+    </div>
+  <div class="section-body">
+      <div style="display:grid;grid-template-columns:1fr 80px 80px 32px;gap:6px;margin-bottom:4px;padding:0 2px;">
+        <span style="font-size:11px;color:var(--text-muted);font-weight:500;">Médicament</span>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:500;text-align:center;">Dose</span>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:500;text-align:center;">Heure</span>
+        <span></span>
+      </div>
+      <div id="meds-list"></div>
+      <button class="btn-add" onclick="addMedRow()">＋ Ajouter un médicament</button>
+    </div>
+  </div>
+
+  <!-- SOMMEIL -->
+  <div class="section-card" id="sec-sommeil">
+    <div class="section-header" onclick="toggleSection('sec-sommeil')">
+      <span class="section-title"><span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/><path d="M19 3v4M21 5h-4"/></svg></span> Sommeil</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <label>Score de sommeil (0–100)</label>
+      <input type="number" id="sleep-score" min="0" max="100" placeholder="ex: 72">
+      <label>Durée totale</label>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <input type="number" id="sleep-hours" min="0" max="24" step="1" placeholder="h" style="width:72px;margin:0;">
+        <span style="color:var(--text-muted);font-size:13px;">h</span>
+        <input type="number" id="sleep-minutes" min="0" max="59" step="5" placeholder="min" style="width:72px;margin:0;">
+        <span style="color:var(--text-muted);font-size:13px;">min</span>
+      </div>
+      <label>Qualité de la nuit</label>
+      <div class="sq-group">
+        <button class="sq-btn" data-val="bonne" onclick="selectSQ(this)">Bonne</button>
+        <button class="sq-btn" data-val="ok" onclick="selectSQ(this)">OK</button>
+        <button class="sq-btn" data-val="affreuse" onclick="selectSQ(this)">Affreuse</button>
+      </div>
+      <label>Nombre de réveils</label>
+      <div class="pill-group" id="wakeups-group">
+        <button class="pill" data-val="0" onclick="selectPill(this,'wakeups-group')">0</button>
+        <button class="pill" data-val="1-3" onclick="selectPill(this,'wakeups-group')">1–3</button>
+        <button class="pill" data-val="4-6" onclick="selectPill(this,'wakeups-group')">4–6</button>
+        <button class="pill" data-val="7-9" onclick="selectPill(this,'wakeups-group')">7–9</button>
+        <button class="pill" data-val="10+" onclick="selectPill(this,'wakeups-group')">10+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HUMEUR -->
+  <div class="section-card" id="sec-humeur">
+    <div class="section-header" onclick="toggleSection('sec-humeur')">
+      <span class="section-title"><span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3a3 3 0 0 1 3 3 3 3 0 0 1 3-3 3 3 0 0 1 0 6 3 3 0 0 1 3 3 3 3 0 0 1-6 0 3 3 0 0 1-3 3 3 3 0 0 1 0-6 3 3 0 0 1-3-3 3 3 0 0 1 3 3 3 3 0 0 1 0-6z"/></svg></span> Humeur</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <div class="mood-grid">
+
+        <!-- 1 - Orage -->
+        <button class="mood-btn" data-val="1" onclick="selectMood(this)">
+          <svg width="38" height="38" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 24c0-4.5 3.5-8.5 8-8.5.3 0 .6 0 .9.06A6.5 6.5 0 0 1 27 21a6.5 6.5 0 0 1-1.3 12.9H13a7.5 7.5 0 0 1-5-13.9z" fill="#7A8898" stroke="#5A6878" stroke-width="1"/>
+            <path d="M25 28c0-4 3-7 7-7 .3 0 .6 0 .9.06A6 6 0 0 1 42 25.5a6 6 0 0 1-1.2 11.9H28a7 7 0 0 1-3-13.4z" fill="#8A9AAA" stroke="#6A7A8A" stroke-width="1"/>
+            <g stroke="#4466BB" stroke-width="2" stroke-linecap="round">
+              <line x1="18" y1="38" x2="14" y2="46"/><line x1="26" y1="38" x2="22" y2="46"/><line x1="34" y1="38" x2="30" y2="46"/>
+            </g>
+            <g stroke="#FFCC00" stroke-width="2" stroke-linecap="round">
+              <polyline points="22,34 19,40 23,40 20,47"/><polyline points="30,34 27,40 31,40 28,47"/>
+            </g>
+          </svg>
+          <span class="mood-label">Exécrable</span>
+        </button>
+
+        <!-- 2 - Pluie -->
+        <button class="mood-btn" data-val="2" onclick="selectMood(this)">
+          <svg width="38" height="38" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 22c0-4 3-7.5 7.5-7.5.3 0 .5 0 .8.05A5.5 5.5 0 0 1 28 19.5a5.5 5.5 0 0 1-1.1 11H13a6.5 6.5 0 0 1-3-12.5z" fill="#8898A8" stroke="#6878A0" stroke-width="1"/>
+            <path d="M24 26c0-3.5 2.5-6 6.5-6 .2 0 .5 0 .7.04A4.5 4.5 0 0 1 40 24a4.5 4.5 0 0 1-.9 8.9H26a5.5 5.5 0 0 1-2-10.9z" fill="#9AAABB" stroke="#7A8AAB" stroke-width="1"/>
+            <g stroke="#5580CC" stroke-width="2" stroke-linecap="round">
+              <line x1="16" y1="36" x2="13" y2="43"/><line x1="23" y1="36" x2="20" y2="43"/>
+              <line x1="30" y1="36" x2="27" y2="43"/><line x1="37" y1="36" x2="34" y2="43"/>
+            </g>
+          </svg>
+          <span class="mood-label">Moins bien</span>
+        </button>
+
+        <!-- 3 - Nuageux -->
+        <button class="mood-btn" data-val="3" onclick="selectMood(this)">
+          <svg width="38" height="38" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="21" r="7" fill="#D4B840" opacity="0.7"/>
+            <g stroke="#D4B840" stroke-width="1.8" stroke-linecap="round" opacity="0.7">
+              <line x1="18" y1="10" x2="18" y2="7"/><line x1="8" y1="21" x2="5" y2="21"/>
+              <line x1="11" y1="14" x2="9" y2="12"/><line x1="25" y1="14" x2="27" y2="12"/>
+            </g>
+            <path d="M14 28c0-3.5 2.5-6.5 6-6.5.3 0 .5 0 .8.05A4.5 4.5 0 0 1 30 26a4.5 4.5 0 0 1-.9 9H16a5.5 5.5 0 0 1-2-10.9z" fill="#B8C8D8" stroke="#98B0C8" stroke-width="1"/>
+            <path d="M26 32c0-3 2-5.5 5.5-5.5.2 0 .4 0 .6.04A4 4 0 0 1 40 30a4 4 0 0 1-.8 7.9H28a5 5 0 0 1-2-9.4z" fill="#C8D8E8" stroke="#A8C0D0" stroke-width="1"/>
+          </svg>
+          <span class="mood-label">Neutre</span>
+        </button>
+
+        <!-- 4 - Soleil voilé -->
+        <button class="mood-btn" data-val="4" onclick="selectMood(this)">
+          <svg width="38" height="38" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="9" fill="#F5B830"/>
+            <g stroke="#F5B830" stroke-width="2" stroke-linecap="round">
+              <line x1="20" y1="7" x2="20" y2="4"/><line x1="7" y1="20" x2="4" y2="20"/>
+              <line x1="11" y1="11" x2="9" y2="9"/><line x1="29" y1="11" x2="31" y2="9"/>
+              <line x1="20" y1="33" x2="20" y2="36"/>
+            </g>
+            <path d="M22 30c0-3 2-5.5 5-5.5.2 0 .4 0 .6.03A3.8 3.8 0 0 1 36 28a3.8 3.8 0 0 1-.8 7.5H24a4.8 4.8 0 0 1-2-9.4z" fill="#D8E8F0" stroke="#B8D0E0" stroke-width="1"/>
+          </svg>
+          <span class="mood-label">Bien</span>
+        </button>
+
+        <!-- 5 - Plein soleil -->
+        <button class="mood-btn" data-val="5" onclick="selectMood(this)">
+          <svg width="38" height="38" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="26" cy="26" r="12" fill="#F5A800"/>
+            <g stroke="#F5A800" stroke-width="2.2" stroke-linecap="round">
+              <line x1="26" y1="8" x2="26" y2="4"/><line x1="26" y1="48" x2="26" y2="44"/>
+              <line x1="8" y1="26" x2="4" y2="26"/><line x1="48" y1="26" x2="44" y2="26"/>
+              <line x1="14" y1="14" x2="11" y2="11"/><line x1="41" y1="41" x2="38" y2="38"/>
+              <line x1="38" y1="14" x2="41" y2="11"/><line x1="11" y1="41" x2="14" y2="38"/>
+            </g>
+          </svg>
+          <span class="mood-label">Extraordinaire</span>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SYMPTÔMES -->
+  <div class="section-card" id="sec-symptomes">
+    <div class="section-header" onclick="toggleSection('sec-symptomes')">
+      <span class="section-title"><span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></span> Symptômes</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <div style="font-size:11px;color:var(--text-muted);margin-bottom:8px;padding:6px 10px;background:var(--bg);border-radius:6px;">
+        Intensité : <strong>1</strong> = un peu &nbsp;·&nbsp; <strong>2</strong> = assez &nbsp;·&nbsp; <strong>3</strong> = beaucoup
+      </div>
+      <div id="symptoms-list"></div>
+      <div style="margin-top:10px;">
+        <label>Ajouter un symptôme à aujourd'hui</label>
+        <div style="display:flex;gap:8px;margin-top:4px;">
+          <select id="symptom-select" style="flex:1;margin:0;" onchange="onSymptomSelectChange(this)">
+            <option value="">— choisir —</option>
+          </select>
+          <button class="btn-secondary" onclick="addSymptomEntry()">Ajouter</button>
+        </div>
+        <div id="custom-symptom-row" style="display:none;margin-top:8px;display:none;">
+          <div style="display:flex;gap:8px;">
+            <input type="text" id="custom-symptom-input" placeholder="Nom du nouveau symptôme…" style="flex:1;margin:0;">
+            <button class="btn-secondary" onclick="confirmCustomSymptom()">Confirmer</button>
+            <button class="btn-secondary" onclick="cancelCustomSymptom()" style="color:var(--danger);">✕</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MENSTRUATIONS -->
+  <div class="section-card" id="sec-mens">
+    <div class="section-header" onclick="toggleSection('sec-mens')">
+      <span class="section-title"><span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/><rect x="7" y="13" width="2" height="2" rx="0.3" fill="currentColor" stroke="none"/><rect x="11" y="13" width="2" height="2" rx="0.3" fill="currentColor" stroke="none"/><rect x="15" y="13" width="2" height="2" rx="0.3" fill="currentColor" stroke="none"/><rect x="7" y="17" width="2" height="2" rx="0.3" fill="currentColor" stroke="none"/><rect x="11" y="17" width="2" height="2" rx="0.3" fill="currentColor" stroke="none"/></svg></span> Menstruations</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <div class="flow-grid" id="flow-grid">
+        <button class="flow-btn flow-btn-none" data-val="rien" onclick="selectFlow(this)"><span class="flow-icon"><svg width="13" height="17" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 1C5 1 1 5.5 1 8.5C1 10.985 2.791 13 5 13C7.209 13 9 10.985 9 8.5C9 5.5 5 1 5 1Z" stroke="currentColor" stroke-width="1.2" fill="none" opacity="0.4"/></svg></span>Rien</button>
+        <button class="flow-btn" data-val="spotting" onclick="selectFlow(this)"><span class="flow-icon"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="4.5" cy="4.5" r="4.5" fill="currentColor"/></svg><svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="4.5" cy="4.5" r="4.5" fill="currentColor"/></svg><svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="4.5" cy="4.5" r="4.5" fill="currentColor"/></svg></span>Spotting</button>
+        <button class="flow-btn" data-val="leger" onclick="selectFlow(this)"><span class="flow-icon"><svg width="13" height="17" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="drop-svg"><path d="M5 1C5 1 1 5.5 1 8.5C1 10.985 2.791 13 5 13C7.209 13 9 10.985 9 8.5C9 5.5 5 1 5 1Z" stroke="currentColor" stroke-width="1.2" fill="currentColor"/></svg></span>Léger</button>
+        <button class="flow-btn" data-val="regulier" onclick="selectFlow(this)"><span class="flow-icon"><svg width="13" height="17" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="drop-svg"><path d="M5 1C5 1 1 5.5 1 8.5C1 10.985 2.791 13 5 13C7.209 13 9 10.985 9 8.5C9 5.5 5 1 5 1Z" stroke="currentColor" stroke-width="1.2" fill="currentColor"/></svg><svg width="13" height="17" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="drop-svg"><path d="M5 1C5 1 1 5.5 1 8.5C1 10.985 2.791 13 5 13C7.209 13 9 10.985 9 8.5C9 5.5 5 1 5 1Z" stroke="currentColor" stroke-width="1.2" fill="currentColor"/></svg></span>Régulier</button>
+        <button class="flow-btn" data-val="intense" onclick="selectFlow(this)"><span class="flow-icon"><svg width="13" height="17" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="drop-svg"><path d="M5 1C5 1 1 5.5 1 8.5C1 10.985 2.791 13 5 13C7.209 13 9 10.985 9 8.5C9 5.5 5 1 5 1Z" stroke="currentColor" stroke-width="1.2" fill="currentColor"/></svg><svg width="13" height="17" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="drop-svg"><path d="M5 1C5 1 1 5.5 1 8.5C1 10.985 2.791 13 5 13C7.209 13 9 10.985 9 8.5C9 5.5 5 1 5 1Z" stroke="currentColor" stroke-width="1.2" fill="currentColor"/></svg><svg width="13" height="17" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="drop-svg"><path d="M5 1C5 1 1 5.5 1 8.5C1 10.985 2.791 13 5 13C7.209 13 9 10.985 9 8.5C9 5.5 5 1 5 1Z" stroke="currentColor" stroke-width="1.2" fill="currentColor"/></svg></span>Intense</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACTIVITÉ -->
+  <div class="section-card" id="sec-activite">
+    <div class="section-header" onclick="toggleSection('sec-activite')">
+      <span class="section-title"><span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span> Activité physique</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <div id="activity-list"></div>
+      <button class="btn-add" onclick="addActivityRow()">＋ Ajouter une activité</button>
+      <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border);">
+        <label style="margin-top:0;">Pas dans la journée</label>
+        <input type="number" id="steps" placeholder="ex: 8500" min="0">
+      </div>
+    </div>
+  </div>
+
+  <!-- POIDS -->
+  <div class="section-card" id="sec-poids">
+    <div class="section-header" onclick="toggleSection('sec-poids')">
+      <span class="section-title"><span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 4.5-6 11-6 11S6 13.5 6 9z"/><circle cx="12" cy="9" r="2.5"/></svg></span> Poids</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <label>Poids (lbs)</label>
+      <input type="number" id="weight" placeholder="ex: 142.5" step="0.1" min="0">
+    </div>
+  </div>
+
+  <!-- ALIMENTATION -->
+  <div class="section-card" id="sec-alim">
+    <div class="section-header" onclick="toggleSection('sec-alim')">
+      <span class="section-title"><span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1-1.5 3-2 4-1"/><path d="M8 6.5C3 7 2 13 4 17c1.5 3 3 5 5 5 1 0 2-.5 3-.5s2 .5 3 .5c2 0 3.5-2 5-5 2-4 1-10-4-10.5"/><path d="M10 6.5C10 5 11 3.5 12 3"/></svg></span> Alimentation</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <label>Déjeuner</label>
+      <textarea id="food-breakfast" placeholder="Ce que vous avez mangé au déjeuner…" rows="2"></textarea>
+      <label>Dîner</label>
+      <textarea id="food-lunch" placeholder="Dîner…" rows="2"></textarea>
+      <label>Souper</label>
+      <textarea id="food-dinner" placeholder="Souper…" rows="2"></textarea>
+      <label>Collations</label>
+      <textarea id="food-snacks" placeholder="Collations…" rows="2"></textarea>
+    </div>
+  </div>
+
+  <!-- NOTES -->
+  <div class="section-card" id="sec-notes">
+    <div class="section-header" onclick="toggleSection('sec-notes')">
+      <span class="section-title"><span class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span> Notes libres</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <label>Note générale de la journée</label>
+      <textarea id="notes" placeholder="Remarques, observations, ressentis particuliers…" rows="4"></textarea>
+    </div>
+  </div>
+
+  <button class="btn-primary" onclick="saveEntry()">Enregistrer</button>
+</div>
+
+
+<!-- ==================== GRAPHIQUES ==================== -->
+<div id="screen-graphiques" class="screen">
+
+  <!-- PÉRIODE -->
+  <div class="chart-period-row">
+    <button class="chart-period-btn active" data-days="14" onclick="setChartPeriod(this)">14 j</button>
+    <button class="chart-period-btn" data-days="30" onclick="setChartPeriod(this)">30 j</button>
+    <button class="chart-period-btn" data-days="90" onclick="setChartPeriod(this)">3 mois</button>
+    <button class="chart-period-btn" data-days="180" onclick="setChartPeriod(this)">6 mois</button>
+  </div>
+
+  <!-- VARIABLES À AFFICHER -->
+  <div class="chart-card" style="margin-bottom:14px;">
+    <div class="chart-title" style="margin-bottom:10px;">Choisir les variables</div>
+    <div class="var-toggles" id="var-toggles">
+      <button class="var-toggle active" data-var="mood" onclick="toggleVar(this)">Humeur</button>
+      <button class="var-toggle active" data-var="sleep" onclick="toggleVar(this)">Sommeil</button>
+      <button class="var-toggle active" data-var="weight" onclick="toggleVar(this)">Poids</button>
+      <button class="var-toggle" data-var="steps" onclick="toggleVar(this)">Pas</button>
+      <button class="var-toggle" data-var="flow" onclick="toggleVar(this)">Flux</button>
+    </div>
+    <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);">
+      <div style="font-size:11px;font-weight:600;color:var(--text-muted);margin-bottom:6px;">Symptômes</div>
+      <div class="var-toggles" id="symptom-toggles"></div>
+    </div>
+  </div>
+
+  <!-- PDF EXPORT -->
+  <div style="display:flex;justify-content:flex-end;margin-bottom:10px;">
+    <button class="btn-secondary" onclick="exportGraphsPDF()" style="font-size:12px;">⬇ PDF des graphiques</button>
+  </div>
+
+  <!-- MÉDICAMENTS (toujours visible) -->
+  <div class="chart-card">
+    <div class="chart-title">Médicaments</div>
+    <div id="med-timeline" class="med-timeline"></div>
+  </div>
+
+  <!-- GRAPHIQUE PRINCIPAL (humeur + sommeil + poids + pas + flux) -->
+  <div class="chart-card" id="main-chart-card" style="display:none;">
+    <div class="chart-title" id="main-chart-title">Données</div>
+    <canvas class="chart-canvas" id="chart-main" height="160"></canvas>
+    <div class="chart-legend" id="main-legend"></div>
+  </div>
+
+  <!-- SYMPTÔMES (un graphique empilé par symptôme sélectionné) -->
+  <div id="symptom-charts-container"></div>
+
+</div>
+
+<div class="chart-tooltip" id="chart-tooltip"></div>
+
+<!-- ==================== HISTORIQUE ==================== -->
+<div id="screen-historique" class="screen">
+  <div id="history-list"></div>
+</div>
+
+<!-- ==================== RAPPORT ==================== -->
+<div id="screen-rapport" class="screen">
+  <div class="report-controls">
+    <label style="margin-top:0;">Période</label>
+    <div class="period-btns">
+      <button class="period-btn active" data-period="7" onclick="selectPeriod(this)">7 jours</button>
+      <button class="period-btn" data-period="30" onclick="selectPeriod(this)">30 jours</button>
+      <button class="period-btn" data-period="180" onclick="selectPeriod(this)">6 mois</button>
+      <button class="period-btn" data-period="custom" onclick="selectPeriod(this)">Personnalisé</button>
+    </div>
+    <div class="custom-dates" id="custom-dates" style="display:none;">
+      <input type="date" id="report-from">
+      <span style="color:var(--text-muted);font-size:13px;">→</span>
+      <input type="date" id="report-to">
+    </div>
+    <label style="margin-top:12px;">Critères à afficher</label>
+    <div class="criteria-grid" id="criteria-grid">
+      <button class="criteria-item selected" data-key="medication" onclick="toggleCriteria(this)">Médicaments</button>
+      <button class="criteria-item selected" data-key="mood" onclick="toggleCriteria(this)">Humeur</button>
+      <button class="criteria-item selected" data-key="sleep" onclick="toggleCriteria(this)">Sommeil</button>
+      <button class="criteria-item selected" data-key="wakeups" onclick="toggleCriteria(this)">Réveils</button>
+      <button class="criteria-item selected" data-key="flow" onclick="toggleCriteria(this)">Menstruations</button>
+      <button class="criteria-item" data-key="weight" onclick="toggleCriteria(this)">Poids</button>
+      <button class="criteria-item" data-key="steps" onclick="toggleCriteria(this)">Pas</button>
+      <button class="criteria-item" data-key="activity" onclick="toggleCriteria(this)">Activité</button>
+    </div>
+    <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);">
+      <div style="font-size:12px;font-weight:600;color:var(--text-muted);margin-bottom:6px;">Symptômes à inclure</div>
+      <div class="criteria-grid" id="symptom-criteria-grid" style="grid-template-columns:1fr 1fr 1fr;">
+        <span style="font-size:12px;color:var(--text-muted);grid-column:1/-1;">Générez d'abord un rapport pour voir les symptômes disponibles.</span>
+      </div>
+    </div>
+    <div style="margin-top:12px;display:flex;gap:8px;">
+      <button class="btn-primary" style="margin:0;flex:1" onclick="generateReport()">Générer le rapport</button>
+    </div>
+  </div>
+  <div class="export-row" id="export-row" style="display:none;">
+    <button class="btn-secondary" onclick="exportCSV()">⬇ CSV</button>
+    <button class="btn-secondary" onclick="exportPDF()">⬇ PDF</button>
+    <button class="btn-secondary" onclick="window.print()">🖨 Imprimer</button>
+  </div>
+  <div id="report-output"></div>
+</div>
+
+<!-- ==================== RÉGLAGES ==================== -->
+<div id="screen-reglages" class="screen">
+  <div class="settings-section">
+    <div class="settings-title">Profil</div>
+    <div class="settings-item">
+      <span style="white-space:nowrap;margin-right:12px;">Votre nom</span>
+      <input type="text" id="user-name" placeholder="Prénom Nom" style="margin:0;max-width:200px;" oninput="saveName(this.value)">
+    </div>
+  </div>
+  <div class="settings-section">
+    <div class="settings-title">Médicaments par défaut</div>
+    <div id="default-meds-list"></div>
+    <div class="add-tag-row">
+      <input type="text" id="new-default-med" placeholder="Nom du médicament…">
+      <button class="btn-secondary" onclick="addDefaultMed()">Ajouter</button>
+    </div>
+  </div>
+  <div class="settings-section">
+    <div class="settings-title">Liste des symptômes</div>
+    <div class="tag-list" id="symptoms-tag-list"></div>
+    <div class="add-tag-row">
+      <input type="text" id="new-symptom" placeholder="Nouveau symptôme…">
+      <button class="btn-secondary" onclick="addSymptom()">Ajouter</button>
+    </div>
+  </div>
+  <div class="settings-section">
+    <div class="settings-title">Rappel quotidien</div>
+    <div class="settings-item">
+      <span>Heure du rappel</span>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <input type="time" id="reminder-time" style="width:110px;margin:0;" value="">
+        <button class="btn-secondary" onclick="scheduleReminder(document.getElementById('reminder-time').value)">Activer</button>
+        <button class="btn-secondary" onclick="localStorage.removeItem('sh_reminder_hour');showToast('Rappel désactivé');">Off</button>
+      </div>
+    </div>
+    <div style="font-size:12px;color:var(--text-muted);padding:4px 2px;">Votre navigateur doit autoriser les notifications. Le rappel fonctionne uniquement si cette page est ouverte.</div>
+  </div>
+
+  <div class="settings-section">
+    <div class="settings-title">Données</div>
+    <div class="settings-item">
+      <span>Exporter toutes les données (JSON)</span>
+      <button class="btn-secondary" onclick="exportAllJSON()">Exporter</button>
+    </div>
+    <div class="settings-item">
+      <span>Importer des données (JSON)</span>
+      <label class="btn-secondary" style="cursor:pointer;">Importer <input type="file" accept=".json" onchange="importJSON(event)" style="display:none"></label>
+    </div>
+    <div class="settings-item" style="color:var(--danger)">
+      <span>Supprimer toutes les données</span>
+      <button class="btn-secondary" style="color:var(--danger);border-color:var(--danger);" onclick="clearAllData()">Supprimer</button>
+    </div>
+  </div>
+</div>
+
+
+<div id="pwa-banner">
+  <div class="pwa-text">
+    <strong>Installer l'application</strong>
+    Appuyez sur <strong>Partager</strong> puis <strong>Sur l'écran d'accueil</strong>
+  </div>
+  <button class="pwa-close" onclick="dismissPWABanner()">✕</button>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<div id="pdf-overlay">
+  <div class="pdf-overlay-bar">
+    <h2 id="pdf-overlay-title">Rapport</h2>
+    <button onclick="window.print()">🖨 Imprimer / PDF</button>
+    <button class="close-btn" onclick="closePdfOverlay()">✕ Fermer</button>
+  </div>
+  <div id="pdf-overlay-content"></div>
+</div>
+
+<script>
+// ==================== DATA STRUCTURE ====================
+// Entry schema:
+// {
+//   date: "YYYY-MM-DD",
+//   medications: [{name, dose, unit, time}],
+//   sleep: {score, duration, quality, wakeups},
+//   mood: 1-5,
+//   symptoms: [{name, intensity: 1-3}],
+//   flow: "rien|spotting|leger|regulier|intense",
+//   activities: [{type, duration}],
+//   food: {breakfast, lunch, dinner, snacks},
+//   notes: ""
+// }
+
+const DB = {
+  get entries() { return JSON.parse(localStorage.getItem('sh_entries') || '{}'); },
+  set entries(v) { localStorage.setItem('sh_entries', JSON.stringify(v)); },
+  get settings() { return JSON.parse(localStorage.getItem('sh_settings') || JSON.stringify(DEFAULT_SETTINGS)); },
+  set settings(v) { localStorage.setItem('sh_settings', JSON.stringify(v)); }
+};
+
+const DEFAULT_SETTINGS = {
+  defaultMeds: ['Estrogel', 'Progestérone', 'Vitamine D'],
+  symptoms: ['Anxiété', 'Ballonnements', 'Brain fog', 'Bouffées de chaleur', 'Difficulté à trouver des mots', 'Douleurs articulaires', 'Douleurs pelviennes', 'Émotivité', 'Fatigue', 'Fuites urinaires', 'Insomnie', 'Irritabilité', 'Maux de tête', 'Nausées', 'Palpitations cardiaques', 'Perte de motivation', 'Problèmes de concentration', 'Rages de nourriture', 'Sécheresse oculaire', 'Sensibilité aux seins', 'Sueurs nocturnes']
+};
+
+// ==================== STATE ====================
+let currentDate = todayStr();
+let currentEntry = {};
+let activeMedRows = [];
+let activeActivityRows = [];
+let activeSymptomEntries = [];
+let reportPeriod = '7';
+
+function todayStr() {
+  return new Date().toISOString().slice(0,10);
+}
+
+function formatDateFR(dateStr) {
+  const [y,m,d] = dateStr.split('-');
+  const months = ['jan','fév','mars','avr','mai','juin','juil','août','sep','oct','nov','déc'];
+  return `${parseInt(d)} ${months[parseInt(m)-1]} ${y}`;
+}
+
+// ==================== SCREEN NAV ====================
+function showScreen(name) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('screen-' + name).classList.add('active');
+  event.target.classList.add('active');
+  if (name === 'historique') renderHistory();
+  if (name === 'reglages') { renderSettings(); loadName(); }
+  if (name === 'graphiques') setTimeout(renderAllCharts, 50);
+}
+
+function toggleSection(id) {
+  document.getElementById(id).classList.toggle('open');
+}
+
+// ==================== SAISIE ====================
+function loadEntry(date) {
+  isDirty = false;
+  clearTimeout(autosaveTimer);
+  currentDate = date;
+  document.getElementById('entry-date').value = date;
+  // Update save button label
+  const saveBtn = document.querySelector('#screen-saisie .btn-primary');
+  if (saveBtn) saveBtn.textContent = date === todayStr() ? 'Enregistrer' : 'Enregistrer les modifications';
+  const entries = DB.entries;
+  currentEntry = entries[date] ? JSON.parse(JSON.stringify(entries[date])) : {};
+
+  // Reset UI
+  renderMeds();
+  renderActivities();
+  renderSymptomEntries();
+  loadSimpleFields();
+}
+
+function loadSimpleFields() {
+  const e = currentEntry;
+  // Sleep
+  document.getElementById('sleep-score').value = e.sleep?.score || '';
+  // Load duration as h + min
+  const dur = parseFloat(e.sleep?.duration) || 0;
+  document.getElementById('sleep-hours').value = dur ? Math.floor(dur) : '';
+  document.getElementById('sleep-minutes').value = dur ? Math.round((dur % 1) * 60) || '' : '';
+  document.querySelectorAll('.sq-btn').forEach(b => {
+    b.classList.toggle('selected', b.dataset.val === e.sleep?.quality);
+  });
+  document.querySelectorAll('#wakeups-group .pill').forEach(b => {
+    b.classList.toggle('selected', b.dataset.val === e.sleep?.wakeups);
+  });
+  // Mood buttons
+  document.querySelectorAll('.mood-btn').forEach(b => {
+    b.classList.toggle('selected', b.dataset.val === String(e.mood));
+  });
+  // Flow
+  document.querySelectorAll('.flow-btn').forEach(b => {
+    b.classList.toggle('selected', b.dataset.val === e.flow);
+  });
+  // Food
+  document.getElementById('food-breakfast').value = e.food?.breakfast || '';
+  document.getElementById('food-lunch').value = e.food?.lunch || '';
+  document.getElementById('food-dinner').value = e.food?.dinner || '';
+  document.getElementById('food-snacks').value = e.food?.snacks || '';
+  // Notes
+  document.getElementById('notes').value = e.notes || '';
+  // Steps & weight
+  document.getElementById('steps').value = e.steps || '';
+  document.getElementById('weight').value = e.weight || '';
+}
+
+function renderMeds() {
+  const settings = DB.settings;
+  const savedMeds = currentEntry.medications || [];
+  const container = document.getElementById('meds-list');
+  activeMedRows = [];
+
+  // Start with default meds if no saved data
+  const medsToShow = savedMeds.length > 0 ? savedMeds
+    : settings.defaultMeds.map(n => ({name: n, dose:'', unit:'', time:''}));
+
+  container.innerHTML = '';
+  medsToShow.forEach(med => addMedRow(med));
+}
+
+function addMedRow(data = {}) {
+  const id = Date.now() + Math.random();
+  activeMedRows.push(id);
+  const div = document.createElement('div');
+  div.className = 'med-row';
+  div.dataset.rowid = id;
+  div.innerHTML = `
+    <input type="text" placeholder="Médicament" value="${data.name||''}" data-field="name">
+    <input type="text" placeholder="Dose" value="${data.dose||''}" data-field="dose" style="text-align:center">
+    <input type="time" value="${data.time||''}" data-field="time" style="text-align:center">
+    <button class="btn-icon" onclick="removeMedRow(this, '${id}')">✕</button>
+  `;
+  document.getElementById('meds-list').appendChild(div);
+}
+
+function removeMedRow(btn, id) {
+  btn.closest('.med-row').remove();
+  activeMedRows = activeMedRows.filter(r => r != id);
+}
+
+function renderActivities() {
+  const saved = currentEntry.activities || [];
+  activeActivityRows = [];
+  document.getElementById('activity-list').innerHTML = '';
+  if (saved.length === 0) return;
+  saved.forEach(a => addActivityRow(a));
+}
+
+function addActivityRow(data = {}) {
+  const id = Date.now() + Math.random();
+  activeActivityRows.push(id);
+  const div = document.createElement('div');
+  div.className = 'med-row';
+  div.dataset.rowid = id;
+  div.innerHTML = `
+    <input type="text" placeholder="Type d'activité" value="${data.type||''}" data-field="type">
+    <input type="number" placeholder="min" value="${data.duration||''}" data-field="duration" style="text-align:center">
+    <input type="time" value="${data.time||''}" data-field="time" style="text-align:center">
+    <button class="btn-icon" onclick="this.closest('.med-row').remove()">✕</button>
+  `;
+  document.getElementById('activity-list').appendChild(div);
+}
+
+function renderSymptomEntries() {
+  const saved = currentEntry.symptoms || [];
+  activeSymptomEntries = JSON.parse(JSON.stringify(saved));
+  renderSymptomList();
+  refreshSymptomSelect();
+}
+
+function renderSymptomList() {
+  const container = document.getElementById('symptoms-list');
+  container.innerHTML = '';
+  activeSymptomEntries.forEach((s, i) => {
+    const div = document.createElement('div');
+    div.className = 'symptom-row';
+    div.innerHTML = `
+      <span style="font-size:13px;font-weight:500;">${s.name}</span>
+      <div class="intensity-btns">
+        <button class="int-btn ${s.intensity==1?'active':''}" onclick="setIntensity(${i},1)" title="Un peu">1</button>
+        <button class="int-btn ${s.intensity==2?'active':''}" onclick="setIntensity(${i},2)" title="Assez">2</button>
+        <button class="int-btn ${s.intensity==3?'active':''}" onclick="setIntensity(${i},3)" title="Beaucoup">3</button>
+      </div>
+      <button class="btn-icon" onclick="removeSymptom(${i})">✕</button>
+    `;
+    container.appendChild(div);
+  });
+}
+
+function refreshSymptomSelect() {
+  const sel = document.getElementById('symptom-select');
+  const settings = DB.settings;
+  const existing = activeSymptomEntries.map(s => s.name);
+  sel.innerHTML = '<option value="">— choisir —</option>';
+  const sorted = [...settings.symptoms].sort((a,b) => a.localeCompare(b, 'fr'));
+  sorted.forEach(s => {
+    if (!existing.includes(s)) {
+      const opt = document.createElement('option');
+      opt.value = s;
+      opt.textContent = s;
+      sel.appendChild(opt);
+    }
+  });
+  // Also allow custom
+  const custOpt = document.createElement('option');
+  custOpt.value = '__custom__';
+  custOpt.textContent = '+ Autre (saisir)';
+  sel.appendChild(custOpt);
+}
+
+function onSymptomSelectChange(sel) {
+  const row = document.getElementById('custom-symptom-row');
+  if (sel.value === '__custom__') {
+    row.style.display = 'block';
+    document.getElementById('custom-symptom-input').focus();
+  } else {
+    row.style.display = 'none';
+  }
+}
+
+function confirmCustomSymptom() {
+  const input = document.getElementById('custom-symptom-input');
+  const name = input.value.trim();
+  if (!name) { input.focus(); return; }
+  const settings = DB.settings;
+  if (!settings.symptoms.includes(name)) {
+    settings.symptoms.push(name);
+    DB.settings = settings;
+  }
+  activeSymptomEntries.push({name, intensity: 1});
+  renderSymptomList();
+  refreshSymptomSelect();
+  input.value = '';
+  document.getElementById('custom-symptom-row').style.display = 'none';
+  document.getElementById('symptom-select').value = '';
+  isDirty = true;
+}
+
+function cancelCustomSymptom() {
+  document.getElementById('custom-symptom-row').style.display = 'none';
+  document.getElementById('custom-symptom-input').value = '';
+  document.getElementById('symptom-select').value = '';
+}
+
+function addSymptomEntry() {
+  const sel = document.getElementById('symptom-select');
+  const name = sel.value;
+  if (!name || name === '__custom__') return;
+  activeSymptomEntries.push({name, intensity: 1});
+  renderSymptomList();
+  refreshSymptomSelect();
+  sel.value = '';
+  isDirty = true;
+}
+
+function setIntensity(i, val) {
+  activeSymptomEntries[i].intensity = val;
+  renderSymptomList();
+}
+
+function removeSymptom(i) {
+  activeSymptomEntries.splice(i, 1);
+  renderSymptomList();
+  refreshSymptomSelect();
+}
+
+function selectSQ(btn) {
+  document.querySelectorAll('.sq-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+
+function selectPill(btn, groupId) {
+  document.querySelectorAll(`#${groupId} .pill`).forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+
+
+const WEATHER_ICONS = {
+  5: `<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="26" cy="26" r="11" fill="#F0A030" opacity="0.95"/>
+    <g stroke="#F0A030" stroke-width="2.2" stroke-linecap="round">
+      <line x1="26" y1="8" x2="26" y2="4"/>
+      <line x1="26" y1="48" x2="26" y2="44"/>
+      <line x1="8" y1="26" x2="4" y2="26"/>
+      <line x1="48" y1="26" x2="44" y2="26"/>
+      <line x1="13.5" y1="13.5" x2="10.7" y2="10.7"/>
+      <line x1="41.3" y1="41.3" x2="38.5" y2="38.5"/>
+      <line x1="38.5" y1="13.5" x2="41.3" y2="10.7"/>
+      <line x1="10.7" y1="41.3" x2="13.5" y2="38.5"/>
+    </g>
+  </svg>`,
+  4: `<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="21" cy="23" r="8" fill="#F0A030" opacity="0.9"/>
+    <g stroke="#F0A030" stroke-width="2" stroke-linecap="round" opacity="0.8">
+      <line x1="21" y1="10" x2="21" y2="7"/>
+      <line x1="10" y1="23" x2="7" y2="23"/>
+      <line x1="12.5" y1="14.5" x2="10.4" y2="12.4"/>
+      <line x1="29.5" y1="14.5" x2="31.6" y2="12.4"/>
+    </g>
+    <path d="M18 30c0-4 3-7 7-7 .3 0 .7 0 1 .1A5 5 0 0 1 36 28a5 5 0 0 1-1 9.9H20a6 6 0 0 1-2-11.9z" fill="#D0DCE8" stroke="#B8C8D8" stroke-width="1"/>
+  </svg>`,
+  3: `<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="18" cy="22" r="7" fill="#C8B060" opacity="0.6"/>
+    <path d="M16 28c0-3.5 2.5-6.5 6-6.5.3 0 .5 0 .8.05A4.5 4.5 0 0 1 32 26a4.5 4.5 0 0 1-1 9H18a5.5 5.5 0 0 1-2-10.6z" fill="#B0BCCC" stroke="#98AABC" stroke-width="1"/>
+    <path d="M22 36c0-3 2-6 5.5-6 .2 0 .5 0 .7.04A4 4 0 0 1 37 33.5a4 4 0 0 1-.8 7.9H24a5 5 0 0 1-2-9.4z" fill="#C8D0D8" stroke="#A8B8C8" stroke-width="1"/>
+  </svg>`,
+  2: `<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 26c0-4 3-8 7.5-8 .3 0 .6 0 .9.06A6 6 0 0 1 30 23a6 6 0 0 1-1.2 11.9H15a7 7 0 0 1-3-13.9z" fill="#8898A8" stroke="#7080A0" stroke-width="1"/>
+    <path d="M26 32c0-3.5 2.5-6 6.5-6 .2 0 .5 0 .7.05A5 5 0 0 1 42 30a5 5 0 0 1-1 9.9H28a6 6 0 0 1-2-11.9z" fill="#9AA8B8" stroke="#8090A8" stroke-width="1"/>
+    <g stroke="#6080B0" stroke-width="1.8" stroke-linecap="round" opacity="0.7">
+      <line x1="20" y1="39" x2="18" y2="44"/>
+      <line x1="28" y1="41" x2="26" y2="46"/>
+      <line x1="36" y1="39" x2="34" y2="44"/>
+    </g>
+  </svg>`,
+  1: `<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 24c0-4.5 3.5-8.5 8-8.5.3 0 .6 0 .9.06A6.5 6.5 0 0 1 27 21a6.5 6.5 0 0 1-1.3 12.9H13a7.5 7.5 0 0 1-5-13.9z" fill="#606878" stroke="#505868" stroke-width="1"/>
+    <path d="M25 28c0-4 3-7 7-7 .3 0 .6 0 .9.06A6 6 0 0 1 42 25.5a6 6 0 0 1-1.2 11.9H28a7 7 0 0 1-3-13.4z" fill="#707888" stroke="#606070" stroke-width="1"/>
+    <g stroke="#4060A0" stroke-width="1.8" stroke-linecap="round">
+      <line x1="18" y1="38" x2="16" y2="43"/>
+      <line x1="26" y1="40" x2="24" y2="45"/>
+      <line x1="34" y1="38" x2="32" y2="43"/>
+      <line x1="22" y1="44" x2="20" y2="49"/>
+      <line x1="30" y1="44" x2="28" y2="49"/>
+    </g>
+    <g stroke="#7090D0" stroke-width="1.5" stroke-linecap="round" opacity="0.6">
+      <line x1="14" y1="8" x2="22" y2="12"/>
+      <line x1="38" y1="10" x2="32" y2="14"/>
+      <line x1="8" y1="16" x2="14" y2="18"/>
+      <line x1="44" y1="16" x2="38" y2="18"/>
+    </g>
+  </svg>`
+};
+
+const MOOD_LABELS = {5:'Extraordinaire', 4:'Bien', 3:'Neutre', 2:'Moins bien', 1:'Exécrable'};
+let currentMoodValue = 0;
+
+function updateMoodSlider(val) {
+  val = parseInt(val);
+  currentMoodValue = val;
+  const display = document.getElementById('mood-weather-display');
+  const label = document.getElementById('mood-current-label');
+  if (display) display.innerHTML = WEATHER_ICONS[val] || '';
+  if (label) label.textContent = MOOD_LABELS[val] || '—';
+  isDirty = true;
+}
+
+function selectMood(btn) {
+  document.querySelectorAll('.mood-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  isDirty = true;
+}
+
+function selectFlow(btn) {
+  document.querySelectorAll('.flow-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+
+function changeDay(delta) {
+  if (isDirty && !confirm('Des modifications non sauvegardées seront perdues. Continuer ?')) return;
+  const d = new Date(currentDate + 'T12:00:00');
+  d.setDate(d.getDate() + delta);
+  loadEntry(d.toISOString().slice(0,10));
+}
+
+// ==================== SAVE ====================
+function saveEntry() {
+  // Collect medications
+  const medications = [];
+  document.querySelectorAll('#meds-list .med-row').forEach(row => {
+    const name = row.querySelector('[data-field=name]').value.trim();
+    if (!name) return;
+    medications.push({
+      name,
+      dose: row.querySelector('[data-field=dose]').value.trim(),
+      time: row.querySelector('[data-field=time]').value
+    });
+  });
+
+  // Collect activities
+  const activities = [];
+  document.querySelectorAll('#activity-list .med-row').forEach(row => {
+    const type = row.querySelector('[data-field=type]').value.trim();
+    if (!type) return;
+    activities.push({
+      type,
+      duration: row.querySelector('[data-field=duration]').value,
+      time: row.querySelector('[data-field=time]').value
+    });
+  });
+
+  const sleepH = parseInt(document.getElementById('sleep-hours').value) || 0;
+  const sleepM = parseInt(document.getElementById('sleep-minutes').value) || 0;
+  const sleepDuration = (sleepH || sleepM) ? (sleepH + sleepM / 60).toFixed(2) : '';
+
+  const entry = {
+    date: currentDate,
+    medications,
+    sleep: {
+      score: document.getElementById('sleep-score').value,
+      duration: sleepDuration,
+      quality: document.querySelector('.sq-btn.selected')?.dataset.val || '',
+      wakeups: document.querySelector('#wakeups-group .pill.selected')?.dataset.val || ''
+    },
+    mood: document.querySelector('.mood-btn.selected')?.dataset.val || '',
+    symptoms: activeSymptomEntries,
+    flow: document.querySelector('.flow-btn.selected')?.dataset.val || '',
+    activities,
+    food: {
+      breakfast: document.getElementById('food-breakfast').value,
+      lunch: document.getElementById('food-lunch').value,
+      dinner: document.getElementById('food-dinner').value,
+      snacks: document.getElementById('food-snacks').value
+    },
+    notes: document.getElementById('notes').value,
+    steps: document.getElementById('steps').value,
+    weight: document.getElementById('weight').value
+  };
+
+  const entries = DB.entries;
+  entries[currentDate] = entry;
+  DB.entries = entries;
+  isDirty = false;
+  clearTimeout(autosaveTimer);
+
+  showToast('Journée enregistrée');
+}
+
+// ==================== HISTORY ====================
+function renderHistory() {
+  const entries = DB.entries;
+  const keys = Object.keys(entries).sort().reverse();
+  const container = document.getElementById('history-list');
+
+  if (keys.length === 0) {
+    container.innerHTML = '<div class="no-data"><div style="font-size:32px;color:var(--border)">—</div><p>Aucune entrée enregistrée.<br>Commencez la saisie !</p></div>';
+    return;
+  }
+
+  const moodLabels = {5:'☀ Extra.',4:'Soleil',3:'Nuageux',2:'Pluvieux',1:'Orageux'};
+  const flowLabels = {rien:'—',spotting:'·',leger:'▪',regulier:'▪▪',intense:'▪▪▪'};
+
+  container.innerHTML = keys.map(k => {
+    const e = entries[k];
+    let chips = '';
+    if (e.mood) chips += `<span class="chip mood">Humeur ${e.mood}/5</span>`;
+    if (e.sleep?.duration) chips += `<span class="chip sleep">Sommeil ${e.sleep.duration}h</span>`;
+    if (e.flow && e.flow !== 'rien') chips += `<span class="chip flow">${e.flow}</span>`;
+    if (e.weight) chips += `<span class="chip">${e.weight} lbs</span>`;
+    if (e.steps) chips += `<span class="chip">${Number(e.steps).toLocaleString()} pas</span>`;
+    if (e.symptoms?.length) chips += `<span class="chip">${e.symptoms.length} symptôme(s)</span>`;
+    return `<div class="history-item" onclick="goToEntry('${k}')">
+      <div style="flex:1;">
+        <div class="history-date">${formatDateFR(k)}</div>
+        <div class="history-chips">${chips || '<span style="font-size:12px;color:var(--text-muted)">Entrée vide</span>'}</div>
+      </div>
+      <span style="font-size:12px;font-weight:500;color:var(--accent);white-space:nowrap;padding:4px 10px;border:1px solid var(--accent-light);border-radius:5px;background:var(--accent-light);">Modifier</span>
+    </div>`;
+  }).join('');
+}
+
+function goToEntry(date) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('screen-saisie').classList.add('active');
+  document.querySelector('.nav-tab').classList.add('active');
+  loadEntry(date);
+}
+
+// ==================== REPORT ====================
+let activeCriteria = new Set(['medication','mood','sleep','wakeups','flow']);
+let activeCriteriaSymptoms = new Set();
+let currentReportData = [];
+
+function selectPeriod(btn) {
+  document.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  reportPeriod = btn.dataset.period;
+  document.getElementById('custom-dates').style.display = reportPeriod === 'custom' ? 'flex' : 'none';
+}
+
+function toggleCriteria(btn) {
+  const key = btn.dataset.key;
+  btn.classList.toggle('selected');
+  if (activeCriteria.has(key)) activeCriteria.delete(key);
+  else activeCriteria.add(key);
+}
+
+function generateReport() {
+  const entries = DB.entries;
+  const today = todayStr();
+  let fromDate, toDate = today;
+
+  if (reportPeriod === 'custom') {
+    fromDate = document.getElementById('report-from').value;
+    toDate = document.getElementById('report-to').value || today;
+  } else {
+    const d = new Date(today + 'T12:00:00');
+    d.setDate(d.getDate() - parseInt(reportPeriod) + 1);
+    fromDate = d.toISOString().slice(0,10);
+  }
+
+  if (!fromDate) { showToast('Choisissez une période'); return; }
+
+  // Get all dates in range
+  const dates = [];
+  const cur = new Date(fromDate + 'T12:00:00');
+  const end = new Date(toDate + 'T12:00:00');
+  while (cur <= end) {
+    dates.push(cur.toISOString().slice(0,10));
+    cur.setDate(cur.getDate() + 1);
+  }
+
+  currentReportData = dates.map(d => ({ date: d, entry: entries[d] || null }));
+
+  if (dates.length === 0) { showToast('Aucune date dans cette plage'); return; }
+
+  // Build symptom criteria buttons from data
+  const symSet = new Set();
+  currentReportData.forEach(({entry}) => entry?.symptoms?.forEach(s => symSet.add(s.name)));
+  const symGrid = document.getElementById('symptom-criteria-grid');
+  if (symGrid) {
+    if (symSet.size === 0) {
+      symGrid.innerHTML = '<span style="font-size:12px;color:var(--text-muted);grid-column:1/-1;">Aucun symptôme dans cette période.</span>';
+    } else {
+      symGrid.innerHTML = '';
+      [...symSet].sort().forEach(name => {
+        const btn = document.createElement('button');
+        btn.className = 'criteria-item' + (activeCriteriaSymptoms.has(name) ? ' selected' : '');
+        btn.textContent = name;
+        (function(symName) {
+          btn.onclick = function() {
+            btn.classList.toggle('selected');
+            if (activeCriteriaSymptoms.has(symName)) {
+              activeCriteriaSymptoms.delete(symName);
+            } else {
+              activeCriteriaSymptoms.add(symName);
+            }
+            if (currentReportData.length) renderReportTable(currentReportData);
+          };
+        })(name);
+        symGrid.appendChild(btn);
+      });
+    }
+  }
+
+  renderReportTable(currentReportData);
+  document.getElementById('export-row').style.display = 'flex';
+}
+
+function renderReportTable(data) {
+  const moodLabels = {5:'Extraordinaire',4:'Bien',3:'Neutre',2:'Pas bien',1:'Exécrable'};
+  const flowLabels = {rien:'—',spotting:'·',leger:'▪',regulier:'▪▪',intense:'▪▪▪'};
+
+  // Use individually selected symptoms (copy to avoid mutation during iteration)
+  const allSymptoms = new Set(activeCriteriaSymptoms);
+
+  // Build header row
+  const cols = data.map(({date}) => {
+    const [y,m,d] = date.split('-');
+    return `<th>${parseInt(d)}/${parseInt(m)}</th>`;
+  }).join('');
+
+  // Build rows
+  const rows = [];
+
+  if (activeCriteria.has('medication')) {
+    rows.push({
+      label: 'Médicaments',
+      cells: data.map(({entry}) => {
+        if (!entry?.medications?.length) return '<td>—</td>';
+        const txt = entry.medications.map(m => `${m.name}${m.dose?' '+m.dose:''}`).join('<br>');
+        return `<td class="med-cell">${txt}</td>`;
+      })
+    });
+  }
+
+  if (activeCriteria.has('mood')) {
+    rows.push({
+      label: 'Humeur',
+      cells: data.map(({entry}) => {
+        const v = entry?.mood;
+        return `<td>${v ? moodLabels[v] + ' ' + v + '/5' : '—'}</td>`;
+      })
+    });
+  }
+
+  if (activeCriteria.has('sleep')) {
+    rows.push({
+      label: 'Sommeil (h)',
+      cells: data.map(({entry}) => `<td>${entry?.sleep?.duration || '—'}</td>`)
+    });
+    rows.push({
+      label: 'Score sommeil',
+      cells: data.map(({entry}) => `<td>${entry?.sleep?.score || '—'}</td>`)
+    });
+    rows.push({
+      label: 'Qualité nuit',
+      cells: data.map(({entry}) => `<td style="font-size:10px">${entry?.sleep?.quality || '—'}</td>`)
+    });
+  }
+
+  if (activeCriteria.has('wakeups')) {
+    rows.push({
+      label: 'Réveils',
+      cells: data.map(({entry}) => `<td>${entry?.sleep?.wakeups || '—'}</td>`)
+    });
+  }
+
+  if (activeCriteria.has('flow')) {
+    rows.push({
+      label: 'Flux',
+      cells: data.map(({entry}) => {
+        const v = entry?.flow;
+        return `<td>${v ? flowLabels[v] : '—'}</td>`;
+      })
+    });
+  }
+
+  if (activeCriteria.has('weight')) {
+    rows.push({
+      label: 'Poids (lbs)',
+      cells: data.map(({entry}) => `<td>${entry?.weight || '—'}</td>`)
+    });
+  }
+
+  if (activeCriteria.has('steps')) {
+    rows.push({
+      label: 'Pas',
+      cells: data.map(({entry}) => `<td>${entry?.steps ? Number(entry.steps).toLocaleString() : '—'}</td>`)
+    });
+  }
+
+  if (activeCriteria.has('activity')) {
+    rows.push({
+      label: 'Activité',
+      cells: data.map(({entry}) => {
+        if (!entry?.activities?.length) return '<td>—</td>';
+        const txt = entry.activities.map(a => `${a.type}${a.duration?' '+a.duration+'min':''}`).join('<br>');
+        return `<td class="med-cell">${txt}</td>`;
+      })
+    });
+  }
+
+  if (activeCriteria.has('symptoms')) {
+    allSymptoms.forEach(sym => {
+      rows.push({
+        label: `${sym}`,
+        cells: data.map(({entry}) => {
+          const found = entry?.symptoms?.find(s => s.name === sym);
+          const v = found?.intensity || 0;
+          const color = v === 0 ? '' : v === 1 ? '#FEF3C7' : v === 2 ? '#FED7AA' : '#FECACA';
+          return `<td style="background:${color}">${v || '—'}</td>`;
+        })
+      });
+    });
+    if (allSymptoms.size === 0) {
+      rows.push({
+        label: 'Symptômes',
+        cells: data.map(() => '<td>—</td>')
+      });
+    }
+  }
+
+  const tableHTML = `
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Critère</th>${cols}</tr>
+        </thead>
+        <tbody>
+          ${rows.map(r => `<tr><td>${r.label}</td>${r.cells.join('')}</tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
+
+  document.getElementById('report-output').innerHTML = tableHTML;
+}
+
+// ==================== EXPORT ====================
+function exportCSV() {
+  if (!currentReportData.length) return;
+  const moodLabels = {5:'Extraordinaire',4:'Bien',3:'Neutre',2:'Pas bien',1:'Exécrable'};
+  const header = ['Date','Médicaments','Humeur','Score humeur','Sommeil (h)','Score sommeil','Qualité nuit','Réveils','Flux','Activités','Notes'];
+  const rows = currentReportData.map(({date, entry: e}) => {
+    if (!e) return [date,...Array(header.length-1).fill('')];
+    return [
+      date,
+      e.medications?.map(m=>m.name+(m.dose?' '+m.dose:'')).join(' | ') || '',
+      e.mood ? moodLabels[e.mood] : '',
+      e.mood || '',
+      e.sleep?.duration || '',
+      e.sleep?.score || '',
+      e.sleep?.quality || '',
+      e.sleep?.wakeups || '',
+      e.flow || '',
+      e.activities?.map(a=>a.type+(a.duration?' '+a.duration+'min':'')).join(' | ') || '',
+      e.notes || ''
+    ];
+  });
+
+  const csv = [header, ...rows].map(r => r.map(v => `"${String(v).replace(/"/g,'""')}"`).join(',')).join('\n');
+  const blob = new Blob(['\uFEFF'+csv], {type:'text/csv;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = `sante-rapport-${todayStr()}.csv`;
+  a.click(); URL.revokeObjectURL(url);
+}
+
+function exportAllJSON() {
+  const data = { entries: DB.entries, settings: DB.settings, exportedAt: new Date().toISOString() };
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href = url; a.download = `sante-backup-${todayStr()}.json`;
+  a.click(); URL.revokeObjectURL(url);
+}
+
+function importJSON(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (data.entries) DB.entries = data.entries;
+      if (data.settings) DB.settings = data.settings;
+      showToast('✓ Données importées');
+      renderSettings();
+    } catch { showToast('Erreur : fichier invalide'); }
+  };
+  reader.readAsText(file);
+}
+
+function clearAllData() {
+  if (confirm('Supprimer toutes les données ? Cette action est irréversible.')) {
+    localStorage.removeItem('sh_entries');
+    localStorage.removeItem('sh_settings');
+    showToast('Données supprimées');
+    renderSettings();
+  }
+}
+
+// ==================== SETTINGS ====================
+function renderSettings() {
+  const settings = DB.settings;
+
+  // Default meds
+  const medContainer = document.getElementById('default-meds-list');
+  medContainer.innerHTML = '';
+  const tagList = document.createElement('div');
+  tagList.className = 'tag-list';
+  settings.defaultMeds.forEach((m, i) => {
+    const tag = document.createElement('span');
+    tag.className = 'tag';
+    tag.innerHTML = `${m} <button onclick="removeDefaultMed(${i})">✕</button>`;
+    tagList.appendChild(tag);
+  });
+  medContainer.appendChild(tagList);
+
+  // Symptoms
+  const symContainer = document.getElementById('symptoms-tag-list');
+  symContainer.innerHTML = '';
+  settings.symptoms.forEach((s, i) => {
+    const tag = document.createElement('span');
+    tag.className = 'tag';
+    tag.innerHTML = `${s} <button onclick="removeSymptomFromSettings(${i})">✕</button>`;
+    symContainer.appendChild(tag);
+  });
+}
+
+function addDefaultMed() {
+  const input = document.getElementById('new-default-med');
+  const name = input.value.trim();
+  if (!name) return;
+  const settings = DB.settings;
+  settings.defaultMeds.push(name);
+  DB.settings = settings;
+  input.value = '';
+  renderSettings();
+}
+
+function removeDefaultMed(i) {
+  const settings = DB.settings;
+  settings.defaultMeds.splice(i, 1);
+  DB.settings = settings;
+  renderSettings();
+}
+
+function addSymptom() {
+  const input = document.getElementById('new-symptom');
+  const name = input.value.trim();
+  if (!name) return;
+  const settings = DB.settings;
+  if (!settings.symptoms.includes(name)) {
+    settings.symptoms.push(name);
+    DB.settings = settings;
+  }
+  input.value = '';
+  renderSettings();
+}
+
+function removeSymptomFromSettings(i) {
+  const settings = DB.settings;
+  settings.symptoms.splice(i, 1);
+  DB.settings = settings;
+  renderSettings();
+}
+
+// ==================== TOAST ====================
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+// ==================== PRINT STYLES ====================
+// Print styles now injected into popup window by openPrintWindow()
+
+
+
+
+
+// ==================== DAILY REMINDER ====================
+function setupReminderPermission() {
+  if (!('Notification' in window)) return;
+  if (Notification.permission === 'default') {
+    Notification.requestPermission();
+  }
+}
+
+function scheduleReminder(hourStr) {
+  if (!hourStr) return;
+  localStorage.setItem('sh_reminder_hour', hourStr);
+  showToast('Rappel configuré à ' + hourStr);
+}
+
+function checkReminder() {
+  if (!('Notification' in window) || Notification.permission !== 'granted') return;
+  const hour = localStorage.getItem('sh_reminder_hour');
+  if (!hour) return;
+  const [h, m] = hour.split(':').map(Number);
+  const now = new Date();
+  if (now.getHours() === h && now.getMinutes() === m) {
+    const lastShown = localStorage.getItem('sh_reminder_last');
+    const todayKey = todayStr();
+    if (lastShown !== todayKey) {
+      localStorage.setItem('sh_reminder_last', todayKey);
+      new Notification('Suivi Santé', {
+        body: 'Pensez à enregistrer votre journée !',
+        icon: ''
+      });
+    }
+  }
+}
+
+// Check every minute
+setInterval(checkReminder, 60000);
+
+// ==================== AUTOSAVE & DIRTY STATE ====================
+let isDirty = false;
+let autosaveTimer = null;
+
+function markDirty() {
+  isDirty = true;
+  // No autosave — manual save only
+}
+
+function attachDirtyListeners() {
+  // All inputs, selects, textareas in the saisie screen
+  document.querySelectorAll('#screen-saisie input, #screen-saisie textarea, #screen-saisie select').forEach(el => {
+    el.addEventListener('input', markDirty);
+    el.addEventListener('change', markDirty);
+  });
+}
+
+
+// ==================== CHARTS ====================
+let chartDays = 14;
+const ACTIVE_VARS = new Set(['mood', 'sleep', 'weight']);
+const ACTIVE_SYMS = new Set();
+const SYM_COLORS = [
+  '#3D6B8E','#2D8A6A','#8B6AAE','#C0602A','#5B8FBF',
+  '#A03060','#6A8A2A','#7A5AAE','#2A7A8A','#C08A20',
+  '#8A3A3A','#3A6A5A','#5A5A9A','#9A7A2A','#4A8A7A'
+];
+const VAR_COLORS = {
+  mood: '#3D6B8E', sleep: '#5B8FBF', weight: '#8B6AAE',
+  steps: '#2D8A6A', flow: '#A03060'
+};
+const VAR_LABELS = {
+  mood: 'Humeur (1–5)', sleep: 'Sommeil (h)', weight: 'Poids (lbs)',
+  steps: 'Pas (÷1000)', flow: 'Flux (0–4)'
+};
+const FLOW_VALS = { rien: 0, spotting: 1, leger: 2, regulier: 3, intense: 4 };
+const MOOD_LABELS_SHORT = { 5: 'Extra.', 4: 'Bien', 3: 'Neutre', 2: 'Moins bien', 1: 'Exécrable' };
+
+function setChartPeriod(btn) {
+  document.querySelectorAll('.chart-period-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  chartDays = parseInt(btn.dataset.days);
+  renderAllCharts();
+}
+
+function toggleVar(btn) {
+  const v = btn.dataset.var;
+  btn.classList.toggle('active');
+  if (ACTIVE_VARS.has(v)) ACTIVE_VARS.delete(v); else ACTIVE_VARS.add(v);
+  renderMainChart(getChartDates(), DB.entries);
+  updateMainLegend();
+}
+
+function getChartDates() {
+  const dates = [];
+  const today = new Date();
+  for (let i = chartDays - 1; i >= 0; i--) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    dates.push(d.toISOString().slice(0, 10));
+  }
+  return dates;
+}
+
+function fmtDate(dateStr) {
+  const [, m, d] = dateStr.split('-');
+  return `${parseInt(d)}/${parseInt(m)}`;
+}
+
+// ---- MEDICATION TIMELINE ----
+function renderMedTimeline(dates, entries) {
+  const container = document.getElementById('med-timeline');
+  if (!container) return;
+  const inner = document.createElement('div');
+  inner.className = 'med-timeline-inner';
+
+  dates.forEach(d => {
+    const e = entries[d];
+    const col = document.createElement('div');
+    col.className = 'med-day-col';
+    const label = document.createElement('div');
+    label.className = 'med-day-label';
+    label.textContent = fmtDate(d);
+    col.appendChild(label);
+
+    if (e?.medications?.length) {
+      e.medications.forEach(m => {
+        if (!m.name) return;
+        const item = document.createElement('div');
+        item.className = 'med-day-item';
+        item.textContent = m.name;
+        col.appendChild(item);
+        if (m.dose) {
+          const dose = document.createElement('div');
+          dose.className = 'med-day-item med-dose';
+          dose.textContent = m.dose + (m.time ? ' · ' + m.time : '');
+          col.appendChild(dose);
+        }
+      });
+    } else {
+      const empty = document.createElement('div');
+      empty.className = 'med-day-empty';
+      empty.textContent = '—';
+      col.appendChild(empty);
+    }
+    inner.appendChild(col);
+  });
+
+  container.innerHTML = '';
+  container.appendChild(inner);
+}
+
+// ---- CANVAS HELPERS ----
+function setupCanvas(id, heightPx) {
+  const canvas = document.getElementById(id);
+  if (!canvas) return null;
+  const dpr = window.devicePixelRatio || 1;
+  const w = canvas.parentElement.clientWidth - 32;
+  const h = heightPx || parseInt(canvas.getAttribute('height')) || 140;
+  canvas.width = w * dpr;
+  canvas.height = h * dpr;
+  canvas.style.width = w + 'px';
+  canvas.style.height = h + 'px';
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+  return { ctx, w, h };
+}
+
+function drawGrid(ctx, w, h, pad, yMin, yMax, ySteps, dates) {
+  const plotW = w - pad.l - pad.r;
+  const plotH = h - pad.t - pad.b;
+  ctx.strokeStyle = '#E0E8F0'; ctx.lineWidth = 1;
+  for (let i = 0; i <= ySteps; i++) {
+    const y = pad.t + plotH - (i / ySteps) * plotH;
+    ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(pad.l + plotW, y); ctx.stroke();
+    const val = yMin + (i / ySteps) * (yMax - yMin);
+    ctx.fillStyle = '#94A3B8'; ctx.font = '10px DM Sans,sans-serif'; ctx.textAlign = 'right';
+    ctx.fillText(Number.isInteger(val) ? val : val.toFixed(1), pad.l - 4, y + 3);
+  }
+  const step = Math.ceil(dates.length / (w > 400 ? 10 : 6));
+  ctx.fillStyle = '#94A3B8'; ctx.font = '10px DM Sans,sans-serif'; ctx.textAlign = 'center';
+  dates.forEach((d, i) => {
+    if (i % step === 0 || i === dates.length - 1) {
+      const x = pad.l + (i / Math.max(1, dates.length - 1)) * plotW;
+      ctx.fillText(fmtDate(d), x, h - 3);
+    }
+  });
+}
+
+function toY(val, yMin, yMax, padT, plotH) {
+  return padT + plotH - ((val - yMin) / Math.max(0.001, yMax - yMin)) * plotH;
+}
+
+function drawLine(ctx, pts, color, lw, filled, pad, plotH) {
+  if (pts.length < 1) return;
+  ctx.strokeStyle = color; ctx.lineWidth = lw; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+  if (filled && pts.length > 1) {
+    ctx.beginPath();
+    ctx.moveTo(pts[0].x, pad.t + plotH);
+    pts.forEach(p => ctx.lineTo(p.x, p.y));
+    ctx.lineTo(pts[pts.length-1].x, pad.t + plotH);
+    ctx.closePath(); ctx.fillStyle = color + '1A'; ctx.fill();
+  }
+  if (pts.length > 1) {
+    ctx.beginPath(); pts.forEach((p,i) => i===0 ? ctx.moveTo(p.x,p.y) : ctx.lineTo(p.x,p.y)); ctx.stroke();
+  }
+  pts.forEach(p => {
+    ctx.beginPath(); ctx.arc(p.x, p.y, 3.5, 0, Math.PI*2);
+    ctx.fillStyle = color; ctx.fill();
+    ctx.strokeStyle = 'white'; ctx.lineWidth = 1.5; ctx.stroke();
+  });
+}
+
+// ---- MAIN CHART (superimposed numeric vars) ----
+function renderMainChart(dates, entries) {
+  const card = document.getElementById('main-chart-card');
+  if (!card) return;
+  if (ACTIVE_VARS.size === 0) { card.style.display = 'none'; return; }
+  card.style.display = 'block';
+
+  const setup = setupCanvas('chart-main', 170);
+  if (!setup) return;
+  const { ctx, w, h } = setup;
+  const pad = { l: 34, r: 12, t: 12, b: 20 };
+  const plotW = w - pad.l - pad.r;
+  const plotH = h - pad.t - pad.b;
+
+  // Collect all series data, normalise to 0–1 for overlay
+  const series = [];
+  ACTIVE_VARS.forEach(v => {
+    const pts = [];
+    dates.forEach((d, i) => {
+      const e = entries[d];
+      let val = null;
+      if (v === 'mood') val = e?.mood ? parseInt(e.mood) : null;
+      else if (v === 'sleep') val = e?.sleep?.duration ? parseFloat(e.sleep.duration) : null;
+      else if (v === 'weight') val = e?.weight ? parseFloat(e.weight) : null;
+      else if (v === 'steps') val = e?.steps ? parseFloat(e.steps) / 1000 : null;
+      else if (v === 'flow') val = e?.flow ? (FLOW_VALS[e.flow] ?? null) : null;
+      if (val !== null && !isNaN(val)) pts.push({ i, d, val });
+    });
+    if (pts.length) series.push({ v, pts, color: VAR_COLORS[v] });
+  });
+
+  if (series.length === 0) {
+    ctx.fillStyle = '#94A3B8'; ctx.font = '13px DM Sans,sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('Aucune donnée pour cette période', w/2, h/2);
+    return;
+  }
+
+  // Each series gets its own normalised scale drawn right-aligned
+  // Draw a shared light grid based on the first series range
+  const allVals = series.flatMap(s => s.pts.map(p => p.val));
+  const globalMin = Math.min(...allVals);
+  const globalMax = Math.max(...allVals);
+  const pad4 = (globalMax - globalMin) * 0.1 || 1;
+  const yMin = globalMin - pad4;
+  const yMax = globalMax + pad4;
+  drawGrid(ctx, w, h, pad, parseFloat(yMin.toFixed(1)), parseFloat(yMax.toFixed(1)), 4, dates);
+
+  series.forEach(s => {
+    const pts = s.pts.map(p => ({
+      x: pad.l + (p.i / Math.max(1, dates.length - 1)) * plotW,
+      y: toY(p.val, yMin, yMax, pad.t, plotH),
+      val: p.val, date: p.d, v: s.v
+    }));
+    drawLine(ctx, pts, s.color, 2.2, true, pad, plotH);
+    registerTooltip('chart-main', pts, p => {
+      const lbl = VAR_LABELS[p.v] || p.v;
+      const fmt = p.v === 'mood' ? (MOOD_LABELS_SHORT[p.val] || p.val) : p.val;
+      return `${fmtDate(p.date)} — ${lbl.split(' ')[0]}: ${fmt}`;
+    });
+  });
+}
+
+function updateMainLegend() {
+  const leg = document.getElementById('main-legend');
+  if (!leg) return;
+  leg.innerHTML = [...ACTIVE_VARS].map(v =>
+    `<div class="chart-legend-item"><div class="chart-legend-dot" style="background:${VAR_COLORS[v]}"></div>${VAR_LABELS[v]}</div>`
+  ).join('');
+}
+
+// ---- SYMPTOM TOGGLE BUTTONS ----
+function buildSymptomToggles(dates, entries) {
+  const symSet = new Set();
+  dates.forEach(d => entries[d]?.symptoms?.forEach(s => symSet.add(s.name)));
+  const container = document.getElementById('symptom-toggles');
+  if (!container) return;
+  container.innerHTML = '';
+
+  if (symSet.size === 0) {
+    container.innerHTML = '<span style="font-size:12px;color:var(--text-muted)">Aucun symptôme sur cette période</span>';
+    return;
+  }
+
+  [...symSet].sort().forEach((name, idx) => {
+    const color = SYM_COLORS[idx % SYM_COLORS.length];
+    const btn = document.createElement('button');
+    btn.className = 'var-toggle' + (ACTIVE_SYMS.has(name) ? ' active' : '');
+    btn.textContent = name;
+    btn.style.setProperty('--sym-color', color);
+    btn.onclick = () => {
+      if (ACTIVE_SYMS.has(name)) ACTIVE_SYMS.delete(name); else ACTIVE_SYMS.add(name);
+      btn.classList.toggle('active');
+      renderSymptomCharts(dates, entries);
+    };
+    container.appendChild(btn);
+  });
+}
+
+// ---- SYMPTOM STACKED CHARTS ----
+function renderSymptomCharts(dates, entries) {
+  const container = document.getElementById('symptom-charts-container');
+  if (!container) return;
+  container.innerHTML = '';
+
+  const symSet = new Set();
+  dates.forEach(d => entries[d]?.symptoms?.forEach(s => symSet.add(s.name)));
+  const allSyms = [...symSet].sort();
+
+  [...ACTIVE_SYMS].forEach(name => {
+    if (!symSet.has(name)) return;
+    const idx = allSyms.indexOf(name);
+    const color = SYM_COLORS[idx % SYM_COLORS.length];
+    const card = document.createElement('div');
+    card.className = 'sym-chart-card';
+    const lbl = document.createElement('div');
+    lbl.className = 'sym-chart-label';
+    lbl.innerHTML = `<span class="sym-color-dot" style="background:${color}"></span>${name} <span style="font-size:10px;color:var(--text-muted);font-weight:400;">(0–3)</span>`;
+    card.appendChild(lbl);
+    const canvas = document.createElement('canvas');
+    canvas.className = 'chart-canvas';
+    canvas.height = 90;
+    const canvasId = 'sym-canvas-' + name.replace(/[^a-z0-9]/gi, '_');
+    canvas.id = canvasId;
+    card.appendChild(canvas);
+    container.appendChild(card);
+
+    // Draw after appending (needs layout)
+    requestAnimationFrame(() => {
+      const setup = setupCanvas(canvasId, 90);
+      if (!setup) return;
+      const { ctx, w, h } = setup;
+      const pad = { l: 22, r: 10, t: 8, b: 18 };
+      const plotW = w - pad.l - pad.r;
+      const plotH = h - pad.t - pad.b;
+
+      // Grid 0–3
+      ctx.strokeStyle = '#E0E8F0'; ctx.lineWidth = 1;
+      [0,1,2,3].forEach(v => {
+        const y = toY(v, 0, 3, pad.t, plotH);
+        ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(pad.l + plotW, y); ctx.stroke();
+        ctx.fillStyle = '#94A3B8'; ctx.font = '9px DM Sans,sans-serif'; ctx.textAlign = 'right';
+        ctx.fillText(v, pad.l - 3, y + 3);
+      });
+      // X labels
+      const step = Math.ceil(dates.length / 6);
+      ctx.fillStyle = '#94A3B8'; ctx.font = '9px DM Sans,sans-serif'; ctx.textAlign = 'center';
+      dates.forEach((d, i) => {
+        if (i % step === 0 || i === dates.length - 1) {
+          ctx.fillText(fmtDate(d), pad.l + (i / Math.max(1, dates.length-1)) * plotW, h - 2);
+        }
+      });
+      // Bars + line
+      const barW = Math.max(3, (plotW / dates.length) * 0.6);
+      // ALL dates get a point (0 if no data) so curve shows true gaps
+      const allPts = [];
+      const tooltipPts = [];
+      dates.forEach((d, i) => {
+        const e = entries[d];
+        const found = e?.symptoms?.find(s => s.name === name);
+        const val = found?.intensity || 0;
+        const x = pad.l + (i / Math.max(1, dates.length-1)) * plotW;
+        const y = toY(val, 0, 3, pad.t, plotH);
+        allPts.push({ x, y, val, date: d });
+        if (val > 0) {
+          const barH = pad.t + plotH - y;
+          ctx.fillStyle = color + '28';
+          ctx.strokeStyle = color;
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          if (ctx.roundRect) ctx.roundRect(x - barW/2, y, barW, barH, 2);
+          else ctx.rect(x - barW/2, y, barW, barH);
+          ctx.fill(); ctx.stroke();
+          tooltipPts.push({ x, y, val, date: d });
+        }
+      });
+      // Draw line through ALL points including zeros
+      if (allPts.length > 1) {
+        ctx.strokeStyle = color; ctx.lineWidth = 1.8; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+        ctx.beginPath(); allPts.forEach((p,i) => i===0 ? ctx.moveTo(p.x,p.y) : ctx.lineTo(p.x,p.y)); ctx.stroke();
+      }
+      // Small dots on zero days too
+      allPts.forEach(p => {
+        if (p.val === 0) {
+          ctx.beginPath(); ctx.arc(p.x, p.y, 2, 0, Math.PI*2);
+          ctx.fillStyle = color + '40'; ctx.fill();
+        }
+      });
+      const intLabels = {0:'absent', 1:'un peu', 2:'assez', 3:'beaucoup'};
+      registerTooltip(canvasId, allPts, p => `${fmtDate(p.date)} — ${name}: ${p.val}/3 (${intLabels[p.val]||p.val})`);
+    });
+  });
+}
+
+// ---- TOOLTIP ----
+const tooltipRegistry = {};
+function registerTooltip(canvasId, points, labelFn) {
+  tooltipRegistry[canvasId] = { points, labelFn };
+  // Re-attach listener on next frame so canvas is in DOM
+  requestAnimationFrame(() => {
+    const canvas = document.getElementById(canvasId);
+    if (!canvas) return;
+    canvas.onmousemove = e => showTip(e, canvasId);
+    canvas.ontouchmove = e => { e.preventDefault(); showTip(e.touches[0], canvasId); };
+    canvas.onmouseleave = hideTip;
+    canvas.ontouchend = hideTip;
+  });
+}
+function showTip(e, id) {
+  const reg = tooltipRegistry[id]; if (!reg?.points?.length) return;
+  const canvas = document.getElementById(id); if (!canvas) return;
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+  let best = null, minD = 30;
+  reg.points.forEach(p => { const d = Math.hypot(p.x-mx, p.y-my); if(d<minD){minD=d;best=p;} });
+  const tip = document.getElementById('chart-tooltip');
+  if (best) { tip.textContent = reg.labelFn(best); tip.style.left=(e.clientX+12)+'px'; tip.style.top=(e.clientY-28)+'px'; tip.style.opacity='1'; }
+  else hideTip();
+}
+function hideTip() { const t=document.getElementById('chart-tooltip'); if(t) t.style.opacity='0'; }
+
+// ---- RENDER ALL ----
+function renderAllCharts() {
+  const dates = getChartDates();
+  const entries = DB.entries;
+  renderMedTimeline(dates, entries);
+  renderMainChart(dates, entries);
+  updateMainLegend();
+  buildSymptomToggles(dates, entries);
+  renderSymptomCharts(dates, entries);
+}
+
+window.addEventListener('resize', () => {
+  if (document.getElementById('screen-graphiques')?.classList.contains('active')) renderAllCharts();
+});
+
+
+// ==================== NAME SETTING ====================
+function saveName(val) {
+  localStorage.setItem('sh_user_name', val);
+}
+function loadName() {
+  const el = document.getElementById('user-name');
+  if (el) el.value = localStorage.getItem('sh_user_name') || '';
+}
+
+
+// ==================== PDF HELPER ====================
+function openPrintWindow(bodyHTML, title) {
+  var overlay = document.getElementById('pdf-overlay');
+  var content = document.getElementById('pdf-overlay-content');
+  var titleEl = document.getElementById('pdf-overlay-title');
+  if (!overlay || !content) { showToast('Erreur affichage'); return; }
+  titleEl.textContent = title;
+  content.innerHTML = bodyHTML;
+  overlay.classList.add('active');
+  overlay.scrollTop = 0;
+  showToast('Utilisez le bouton Imprimer ou Partager > Imprimer pour le PDF');
+}
+
+function closePdfOverlay() {
+  var overlay = document.getElementById('pdf-overlay');
+  if (overlay) overlay.classList.remove('active');
+}
+
+
+// ==================== PDF EXPORT ====================
+function exportPDF() {
+  if (!currentReportData.length) { showToast("Générez d'abord un rapport"); return; }
+
+  const userName = localStorage.getItem('sh_user_name') || '';
+  const dates = currentReportData.map(d => d.date);
+  const fromDate = formatDateFR(dates[0]);
+  const toDate = formatDateFR(dates[dates.length - 1]);
+  const now = new Date().toLocaleDateString('fr-CA');
+
+  const moodLabels = {5:'Extraordinaire',4:'Bien',3:'Neutre',2:'Moins bien',1:'Exécrable'};
+  const flowLabels = {rien:'--',spotting:'Spotting',leger:'Leger',regulier:'Regulier',intense:'Intense'};
+
+  const rows = [];
+
+  if (activeCriteria.has('medication')) {
+    rows.push({ label: 'Medicaments', isMed: true,
+      cells: currentReportData.map(function(d) {
+        var entry = d.entry;
+        if (!entry || !entry.medications || !entry.medications.length) return '--';
+        return entry.medications.map(function(m) {
+          return m.name + (m.dose ? ' ' + m.dose : '') + (m.time ? ' ' + m.time : '');
+        }).join(' | ');
+      })
+    });
+  }
+  if (activeCriteria.has('mood')) {
+    rows.push({ label: 'Humeur', cells: currentReportData.map(function(d) {
+      return d.entry && d.entry.mood ? (moodLabels[d.entry.mood] || d.entry.mood) : '--';
+    })});
+  }
+  if (activeCriteria.has('sleep')) {
+    rows.push({ label: 'Sommeil (h)', cells: currentReportData.map(function(d) { return d.entry && d.entry.sleep ? d.entry.sleep.duration || '--' : '--'; }) });
+    rows.push({ label: 'Score sommeil', cells: currentReportData.map(function(d) { return d.entry && d.entry.sleep ? d.entry.sleep.score || '--' : '--'; }) });
+    rows.push({ label: 'Qualite nuit', cells: currentReportData.map(function(d) { return d.entry && d.entry.sleep ? d.entry.sleep.quality || '--' : '--'; }) });
+  }
+  if (activeCriteria.has('wakeups')) {
+    rows.push({ label: 'Reveils', cells: currentReportData.map(function(d) { return d.entry && d.entry.sleep ? d.entry.sleep.wakeups || '--' : '--'; }) });
+  }
+  if (activeCriteria.has('flow')) {
+    rows.push({ label: 'Flux', cells: currentReportData.map(function(d) {
+      return d.entry && d.entry.flow ? (flowLabels[d.entry.flow] || d.entry.flow) : '--';
+    })});
+  }
+  if (activeCriteria.has('weight')) {
+    rows.push({ label: 'Poids (lbs)', cells: currentReportData.map(function(d) { return d.entry ? d.entry.weight || '--' : '--'; }) });
+  }
+  if (activeCriteria.has('steps')) {
+    rows.push({ label: 'Pas', cells: currentReportData.map(function(d) { return d.entry && d.entry.steps ? Number(d.entry.steps).toLocaleString() : '--'; }) });
+  }
+  if (activeCriteria.has('activity')) {
+    rows.push({ label: 'Activite', cells: currentReportData.map(function(d) {
+      if (!d.entry || !d.entry.activities || !d.entry.activities.length) return '--';
+      return d.entry.activities.map(function(a) { return a.type + (a.duration ? ' ' + a.duration + 'min' : ''); }).join(' | ');
+    })});
+  }
+  activeCriteriaSymptoms.forEach(function(sym) {
+    rows.push({ label: sym, isSym: true, cells: currentReportData.map(function(d) {
+      if (!d.entry || !d.entry.symptoms) return '--';
+      var found = d.entry.symptoms.find(function(s) { return s.name === sym; });
+      return found ? String(found.intensity) : '--';
+    })});
+  });
+
+  var dateHeaders = dates.map(function(d) {
+    var parts = d.split('-');
+    return '<th>' + parseInt(parts[2]) + '/' + parseInt(parts[1]) + '</th>';
+  }).join('');
+
+  var rowsHTML = rows.map(function(row) {
+    var cells = row.cells.map(function(c) {
+      var safe = String(c).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      var cls = row.isMed ? ' class="med-cell"' : '';
+      return '<td' + cls + '>' + safe + '</td>';
+    }).join('');
+    return '<tr><td>' + row.label + '</td>' + cells + '</tr>';
+  }).join('');
+
+  var headerName = userName ? '<strong>' + userName + '</strong> &mdash; ' : '';
+  var bodyHTML = '<div class="pdf-header"><h1>Suivi Sant&eacute; &amp; Hormones</h1><p>' + headerName + 'P&eacute;riode : ' + fromDate + ' au ' + toDate + '</p><p>G&eacute;n&eacute;r&eacute; le ' + now + '</p></div><table><thead><tr><th>Crit&egrave;re</th>' + dateHeaders + '</tr></thead><tbody>' + rowsHTML + '</tbody></table><div class="pdf-footer">Suivi Sant&eacute; &amp; Hormones &middot; ' + userName + ' &middot; ' + fromDate + ' &ndash; ' + toDate + '</div>';
+
+  openPrintWindow(bodyHTML, 'rapport-' + fromDate + '-' + toDate);
+}
+
+// ==================== PDF GRAPHIQUES ====================
+function exportGraphsPDF() {
+  const dates = getChartDates();
+  const entries = DB.entries;
+  const userName = localStorage.getItem('sh_user_name') || '';
+  const fromDate = formatDateFR(dates[0]);
+  const toDate = formatDateFR(dates[dates.length - 1]);
+  const now = new Date().toLocaleDateString('fr-CA');
+
+  // Build medication header
+  const medRows = dates.map(d => {
+    const e = entries[d];
+    const [,m,day] = d.split('-');
+    const meds = e?.medications?.length
+      ? e.medications.map(med => med.name + (med.dose ? ' ' + med.dose : '') + (med.time ? ' · ' + med.time : '')).join('<br>')
+      : '—';
+    return `<td><div class="gpdf-date">${parseInt(day)}/${parseInt(m)}</div><div class="gpdf-med">${meds}</div></td>`;
+  }).join('');
+
+  const headerName = userName ? `<strong>${userName}</strong> — ` : '';
+
+  // Build HTML for the overlay — real canvas elements will be drawn after insertion
+  const symList = [...ACTIVE_SYMS].sort();
+  let chartBlocks = '';
+
+  if (ACTIVE_VARS.size > 0) {
+    const legend = [...ACTIVE_VARS].map(v =>
+      `<span style="display:inline-flex;align-items:center;gap:4px;margin-right:12px;font-size:9pt;">
+        <span style="width:10px;height:10px;border-radius:50%;background:${VAR_COLORS[v]};display:inline-block;"></span>${VAR_LABELS[v]}
+      </span>`).join('');
+    chartBlocks += `
+      <div class="gpdf-chart-block">
+        <div class="gpdf-chart-label">Données</div>
+        <div style="margin-bottom:6pt;">${legend}</div>
+        <canvas id="pdf-canvas-main" style="width:100%;display:block;"></canvas>
+      </div>`;
+  }
+
+  symList.forEach((name, idx) => {
+    const color = SYM_COLORS[idx % SYM_COLORS.length];
+    chartBlocks += `
+      <div class="gpdf-chart-block">
+        <div class="gpdf-chart-label" style="color:${color}">
+          <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${color};margin-right:5px;"></span>
+          ${name} <span style="font-weight:400;font-size:7pt;">(0–3)</span>
+        </div>
+        <canvas id="pdf-canvas-sym-${idx}" data-sym="${name}" data-color="${color}" style="width:100%;display:block;"></canvas>
+      </div>`;
+  });
+
+  if (!chartBlocks) {
+    showToast('Activez au moins une variable ou un symptôme');
+    return;
+  }
+
+  const bodyHTML = `
+    <div class="pdf-header">
+      <h1>Graphiques — Suivi Santé &amp; Hormones</h1>
+      <p>${headerName}Période : ${fromDate} au ${toDate}</p>
+      <p>Généré le ${now}</p>
+    </div>
+    <div class="gpdf-med-section">
+      <div class="gpdf-section-title">Médicaments</div>
+      <div style="overflow-x:auto;"><table class="gpdf-med-table"><tr>${medRows}</tr></table></div>
+    </div>
+    ${chartBlocks}
+    <div class="pdf-footer">Suivi Santé &amp; Hormones · ${userName} · ${fromDate} – ${toDate}</div>
+  `;
+
+  // Open overlay first, then draw canvases after DOM is ready
+  openPrintWindow(bodyHTML, 'graphiques-' + fromDate + '-' + toDate);
+
+  // Draw charts into the overlay canvases after a short delay
+  setTimeout(() => {
+    // Main chart
+    const mainCanvas = document.getElementById('pdf-canvas-main');
+    if (mainCanvas && ACTIVE_VARS.size > 0) {
+      drawChartOnCanvas(mainCanvas, dates, entries, 200);
+    }
+    // Symptom charts
+    symList.forEach((name, idx) => {
+      const canvas = document.getElementById('pdf-canvas-sym-' + idx);
+      if (canvas) {
+        const color = SYM_COLORS[idx % SYM_COLORS.length];
+        drawSymptomOnCanvas(canvas, name, color, dates, entries, 110);
+      }
+    });
+  }, 100);
+}
+
+// Draw main chart (all active vars) onto a given canvas element
+function drawChartOnCanvas(canvas, dates, entries, heightPx) {
+  const dpr = window.devicePixelRatio || 1;
+  const w = canvas.parentElement.clientWidth - 32;
+  const h = heightPx;
+  canvas.width = w * dpr;
+  canvas.height = h * dpr;
+  canvas.style.width = w + 'px';
+  canvas.style.height = h + 'px';
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+  const pad = { l: 34, r: 12, t: 12, b: 20 };
+  const plotW = w - pad.l - pad.r;
+  const plotH = h - pad.t - pad.b;
+
+  const series = [];
+  ACTIVE_VARS.forEach(v => {
+    const pts = [];
+    dates.forEach((d, i) => {
+      const e = entries[d];
+      let val = null;
+      if (v === 'mood') val = e?.mood ? parseInt(e.mood) : null;
+      else if (v === 'sleep') val = e?.sleep?.duration ? parseFloat(e.sleep.duration) : null;
+      else if (v === 'weight') val = e?.weight ? parseFloat(e.weight) : null;
+      else if (v === 'steps') val = e?.steps ? parseFloat(e.steps) / 1000 : null;
+      else if (v === 'flow') val = e?.flow ? (FLOW_VALS[e.flow] ?? null) : null;
+      if (val !== null && !isNaN(val)) pts.push({ i, d, val });
+    });
+    if (pts.length) series.push({ v, pts, color: VAR_COLORS[v] });
+  });
+
+  if (!series.length) {
+    ctx.fillStyle = '#94A3B8'; ctx.font = '12px sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('Aucune donnée', w / 2, h / 2);
+    return;
+  }
+
+  const allVals = series.flatMap(s => s.pts.map(p => p.val));
+  const gMin = Math.min(...allVals), gMax = Math.max(...allVals);
+  const pad4 = (gMax - gMin) * 0.1 || 1;
+  const yMin = gMin - pad4, yMax = gMax + pad4;
+  drawGrid(ctx, w, h, pad, parseFloat(yMin.toFixed(1)), parseFloat(yMax.toFixed(1)), 4, dates);
+
+  series.forEach(s => {
+    const pts = s.pts.map(p => ({
+      x: pad.l + (p.i / Math.max(1, dates.length - 1)) * plotW,
+      y: toY(p.val, yMin, yMax, pad.t, plotH),
+      val: p.val, date: p.d, v: s.v
+    }));
+    drawLine(ctx, pts, s.color, 2.2, true, pad, plotH);
+  });
+}
+
+// Draw a single symptom chart onto a given canvas element
+function drawSymptomOnCanvas(canvas, symName, color, dates, entries, heightPx) {
+  const dpr = window.devicePixelRatio || 1;
+  const w = canvas.parentElement.clientWidth - 32;
+  const h = heightPx;
+  canvas.width = w * dpr;
+  canvas.height = h * dpr;
+  canvas.style.width = w + 'px';
+  canvas.style.height = h + 'px';
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+  const pad = { l: 22, r: 10, t: 8, b: 18 };
+  const plotW = w - pad.l - pad.r;
+  const plotH = h - pad.t - pad.b;
+  const barW = Math.max(3, (plotW / dates.length) * 0.6);
+
+  [0,1,2,3].forEach(v => {
+    const y = toY(v, 0, 3, pad.t, plotH);
+    ctx.strokeStyle = '#E0E8F0'; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(pad.l + plotW, y); ctx.stroke();
+    ctx.fillStyle = '#94A3B8'; ctx.font = '9px sans-serif'; ctx.textAlign = 'right';
+    ctx.fillText(v, pad.l - 3, y + 3);
+  });
+
+  const step = Math.ceil(dates.length / 6);
+  ctx.fillStyle = '#94A3B8'; ctx.font = '9px sans-serif'; ctx.textAlign = 'center';
+  dates.forEach((d, i) => {
+    if (i % step === 0 || i === dates.length - 1) {
+      const [,m,day] = d.split('-');
+      ctx.fillText(parseInt(day) + '/' + parseInt(m), pad.l + (i / Math.max(1,dates.length-1)) * plotW, h - 2);
+    }
+  });
+
+  const allPts = [];
+  dates.forEach((d, i) => {
+    const e = entries[d];
+    const found = e?.symptoms?.find(s => s.name === symName);
+    const val = found?.intensity || 0;
+    const x = pad.l + (i / Math.max(1, dates.length - 1)) * plotW;
+    const y = toY(val, 0, 3, pad.t, plotH);
+    allPts.push({ x, y, val });
+    if (val > 0) {
+      const barH = pad.t + plotH - y;
+      ctx.fillStyle = color + '28'; ctx.strokeStyle = color; ctx.lineWidth = 1;
+      ctx.beginPath();
+      if (ctx.roundRect) ctx.roundRect(x - barW/2, y, barW, barH, 2);
+      else ctx.rect(x - barW/2, y, barW, barH);
+      ctx.fill(); ctx.stroke();
+    }
+  });
+
+  if (allPts.length > 1) {
+    ctx.strokeStyle = color; ctx.lineWidth = 1.8; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+    ctx.beginPath();
+    allPts.forEach((p, i) => i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y));
+    ctx.stroke();
+  }
+}
+
+
+// PWA install banner
+function dismissPWABanner() {
+  document.getElementById('pwa-banner').classList.remove('show');
+  localStorage.setItem('pwa-banner-dismissed', '1');
+}
+
+function checkPWABanner() {
+  // Show only on iOS Safari, not already installed, not dismissed
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const isStandalone = window.navigator.standalone === true;
+  const dismissed = localStorage.getItem('pwa-banner-dismissed');
+  if (isIOS && !isStandalone && !dismissed) {
+    setTimeout(() => {
+      document.getElementById('pwa-banner').classList.add('show');
+    }, 2000);
+  }
+}
+
+
+
+// ==================== INIT ====================
+function init() {
+  loadEntry(todayStr());
+  refreshSymptomSelect();
+  setTimeout(attachDirtyListeners, 100);
+  setupReminderPermission();
+  const savedHour = localStorage.getItem('sh_reminder_hour');
+  if (savedHour) {
+    const el = document.getElementById('reminder-time');
+    if (el) el.value = savedHour;
+  }
+  loadName();
+  checkPWABanner();
+}
+
+document.getElementById('entry-date').addEventListener('change', e => {
+  if (isDirty && !confirm('Des modifications non sauvegardées seront perdues. Continuer ?')) {
+    e.target.value = currentDate; // revert
+    return;
+  }
+  loadEntry(e.target.value);
+});
+init();
+</script>
+</body>
+</html>
